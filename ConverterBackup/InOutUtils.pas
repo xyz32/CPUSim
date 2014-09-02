@@ -1,12 +1,14 @@
 unit InOutUtils;
 
-{$MODE Delphi}
-
 interface
 
 uses
-  math, SysUtils, LCLIntf, LCLType, LMessages, Messages, Forms, strutils;
+  math, SysUtils, IdGlobal, Windows, Messages, Forms;
 
+  function Inp32(wAddr:word):byte; stdcall; external 'inpout32.dll';
+  function Out32(wAddr:word;bOut:byte):byte; stdcall; external 'inpout32.dll';
+  procedure BitSwc(adr: Integer; poz: Byte; sts: Byte; inv: Boolean = False);
+  function BitRead(adr: Integer; poz: Byte; inv: Boolean = False): integer;
   procedure Delay(msecs: Longint);
   procedure NanoSleep(dur: Integer);
   function BinToInt(Value: string): Integer;
@@ -30,6 +32,7 @@ end;
 procedure NanoSleep(dur: Integer);
 var
   i: Integer;
+  Msg: TMsg;
 begin
   if dur>0 then
     Delay(dur)
@@ -49,6 +52,32 @@ begin
         end;}
         application.ProcessMessages;
       end;
+end;
+
+procedure BitSwc(adr: Integer; poz: Byte; sts: Byte; inv: Boolean = False);
+begin
+  if not inv then
+  begin
+    if sts = 0 then
+      out32(adr, inp32(adr) and ($ff - round(power(2, poz))))
+    else
+      out32(adr, inp32(Adr) or round((power(2, poz))));
+  end
+  else
+    if sts = 1 then
+      out32(adr, inp32(adr) and ($ff - round(power(2, poz))))
+    else
+      out32(adr, inp32(Adr) or round((power(2, poz))));
+end;
+
+function BitRead(adr: Integer; poz: Byte; inv: Boolean = False): integer;
+begin
+  result := StrToInt(copy(IntToBin(inp32(Adr)), 32-poz, 1));
+  if inv then
+    if result = 1 then
+      result := 0
+    else
+      result := 1;
 end;
 
 procedure Delay(msecs: Longint);
@@ -96,4 +125,4 @@ begin
   result := tmpUg * smn;
 end;//function GetUgDif(ug1: Integer; ug2: Integer): integer;
 
-end.
+end.

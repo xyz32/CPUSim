@@ -1,15 +1,14 @@
 unit about;
 
-{$MODE Delphi}
-
 interface
 
 uses
-  LCLIntf, LCLType, LMessages, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Buttons, StdCtrls, ExtCtrls, GL;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Buttons, StdCtrls, ExtCtrls, CgWindow, CgUtils, GL, AppEvnts,
+  CgFont;
 
 type
-  TForm2 = class(TForm)
+  TForm2 = class(TCGForm)
     Image1: TImage;
     Label1: TLabel;
     Label2: TLabel;
@@ -18,6 +17,7 @@ type
     SpeedButton1: TSpeedButton;
     Panel1: TPanel;
     procedure SpeedButton1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,10 +26,11 @@ type
 
 var
   Form2: TForm2;
+  CgDC: TCGDeviceContext;
 
 implementation
 
-{$R *.lfm}
+{$R *.dfm}
 
 procedure TForm2.SpeedButton1Click(Sender: TObject);
 begin
@@ -37,4 +38,13 @@ begin
   Form2.Close;
 end;
 
-end.                      
+procedure TForm2.FormCreate(Sender: TObject);
+var
+  pDC: HDC;
+begin
+  pDC := GetDC(Panel1.Handle);
+  CgDC := TCGDeviceContext.Create(pDC);
+  CgDC.InitGL;
+end;
+
+end.                      

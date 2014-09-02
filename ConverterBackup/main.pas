@@ -1,17 +1,12 @@
 unit main;
 
-{$MODE Delphi}
-
 interface
 
 uses
-  LCLIntf, LCLType, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus, StdCtrls, ComCtrls, ExtCtrls, Cpu, InOutUtils;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Menus, StdCtrls, ComCtrls, ExtCtrls, Cpu, AppEvnts, InOutUtils;
 
 type
-
-  { TForm1 }
-
   TForm1 = class(TForm)
     PopupMenu1: TPopupMenu;
     AddBreakPoint1: TMenuItem;
@@ -48,7 +43,7 @@ type
     CheckBox1: TCheckBox;
     CheckBox2: TCheckBox;
     CheckBox3: TCheckBox;
-    ApplicationEvents1: TApplicationProperties;
+    ApplicationEvents1: TApplicationEvents;
     Settings1: TMenuItem;
     CpuSimSettings1: TMenuItem;
     Panel1: TPanel;
@@ -56,15 +51,13 @@ type
     GroupBox4: TGroupBox;
     Splitter1: TSplitter;
     GroupBox2: TGroupBox;
-    RichEdit1: TMemo;
+    RichEdit1: TRichEdit;
     Edit2: TEdit;
     GroupBox3: TGroupBox;
-    RichEdit2: TMemo;
+    RichEdit2: TRichEdit;
     Edit1: TEdit;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure Timer1Timer(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -92,13 +85,12 @@ var
   Form1: TForm1;
   cmpCpu: TCPU;
   codPos: Integer = 0;
-  keys: array[0..255] of boolean;
 
 implementation
 
 uses about, Settings;
 
-{$R *.lfm}
+{$R *.dfm}
 
 {Procedure Tform1.WNDPROC(var msg:TMessage);
 begin
@@ -188,17 +180,6 @@ begin
   cmpCPU.cpuInit;
 end;
 
-procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-  );
-begin
-  if key<256 then Keys[key]:=true;
-end;
-
-procedure TForm1.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-begin
-  if key<256 then Keys[key]:=false;
-end;
-
 procedure TForm1.Timer1Timer(Sender: TObject);
 begin
   if cmpCPU.GetCPUStatus then
@@ -280,19 +261,19 @@ begin
   begin
     done := true;
 
-    if keys[118] then
+    if GetAsyncKeyState(118)<>0 then
     begin
       Button1Click(sender);
       delay(slp);
     end;
 
-    if keys[120] then
+    if GetAsyncKeyState(120)<>0 then
     begin
       Button3Click(sender);
       Delay(slp);
     end;
 
-    if keys[113] then
+    if GetAsyncKeyState(113)<>0 then
     begin
       Button2Click(sender);
       Delay(slp);
@@ -336,4 +317,4 @@ begin
   end;
 end;
 
-end.
+end.

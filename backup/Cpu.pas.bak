@@ -1159,7 +1159,7 @@ begin
     CpuGrf.pmALU;
     CpuGrf.pdRALU;
 
-    ALU := rorword(SBus, 1);
+    ALU := ror(SBus, 1);
     RBus := ALU;
     exec := true;
   end;

@@ -18,6 +18,7 @@ type
     SpeedButton1: TSpeedButton;
     Panel1: TPanel;
     procedure SpeedButton1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public

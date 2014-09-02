@@ -1,11 +1,9 @@
 unit GrfCpu;
 
-{$MODE Delphi}
-
 interface
 
 uses
-  ExtCtrls, Graphics, SysUtils;
+  ExtCtrls, Graphics, SysUtils, Types;
 
 const
   cmdAlu = 0;
@@ -886,4 +884,4 @@ begin
   //cmdMem
 end;//procedure TGrfCpu.cmdMem;
 
-end.
+end.

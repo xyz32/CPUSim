@@ -1,11 +1,9 @@
 unit Cpu;
 
-{$MODE Delphi}
-
 interface
                                                 
 uses
-  GrfCpu, ComCtrls, ExtCtrls, SysUtils, Classes, Dialogs, FileUtil, strutils;
+  GrfCpu, ComCtrls, ExtCtrls, SysUtils, IdGlobal, Classes, Dialogs;
 
 const
   ERRFileNotFound = 0;
@@ -270,7 +268,7 @@ begin
   case regFormat of
     2:
     begin
-      result := copy(IntToBin(intVal, 32), 17, 16);
+      result := copy(IntToBin(intVal), 17, 16);
     end;
     10:
     begin
@@ -369,7 +367,7 @@ var
   f: TextFile;
   ln: String;
 begin
-  if FileExistsUTF8(fl) { *Converted from FileExists* } then
+  if FileExists(fl) then
   begin
     assignFile(f, fl);
     reset(f);
@@ -1149,7 +1147,7 @@ begin
     CpuGrf.pmALU;
     CpuGrf.pdRALU;
 
-    ALU := rolword(SBus, 1);
+    ALU := rol(SBus, 1);
     RBus := ALU;
     exec := true;
   end;
@@ -1159,7 +1157,7 @@ begin
     CpuGrf.pmALU;
     CpuGrf.pdRALU;
 
-    ALU := rorword(SBus, 1);
+    ALU := ror(SBus, 1);
     RBus := ALU;
     exec := true;
   end;
@@ -1467,13 +1465,13 @@ var
       1:
       begin
         result := result + '01';
-        result := result + copy(IntToBin(StrToInt(copy(val, 2, length(val))), 32),29, 4);
+        result := result + copy(IntToBin(StrToInt(copy(val, 2, length(val)))),29, 4);
       end;
       2:
       begin
         result := result + '10';
         delete(val, 1, pos('(', val)+1);
-        result := result + copy(IntToBin(StrToInt(copy(val,1 ,pos(')', val)-1)), 32),29, 4);
+        result := result + copy(IntToBin(StrToInt(copy(val,1 ,pos(')', val)-1))),29, 4);
       end;
       3:
       begin
@@ -1482,7 +1480,7 @@ var
         memInc := memInc + 2;
         
         delete(val, 1, pos('(', val)+1);
-        result := result + copy(IntToBin(StrToInt(copy(val,1 ,pos(')', val)-1)), 32),29, 4);
+        result := result + copy(IntToBin(StrToInt(copy(val,1 ,pos(')', val)-1))),29, 4);
       end;
     end;
   end;
@@ -1520,7 +1518,7 @@ begin
     begin
       rVal := rVal + '1';
       tmpInt := jump('MOV');
-      rVal := rVal + copy(IntToBin(jump(copy(CrInstr.crInstr, 1, pos(' ',CrInstr.crInstr)-1), tmpInt) - tmpInt, 32), 30, 3);
+      rVal := rVal + copy(IntToBin(jump(copy(CrInstr.crInstr, 1, pos(' ',CrInstr.crInstr)-1), tmpInt) - tmpInt), 30, 3);
 
       rVal := rVal + GetAdrMode(CrInstr.madS, CrInstr.valRS, memAdr + memInc);
       rVal := rVal + GetAdrMode(CrInstr.madD, CrInstr.valRD, memAdr + memInc);
@@ -1543,7 +1541,7 @@ begin
     begin
       rVal := rVal + '000';
       tmpInt := jump('CLR');
-      rVal := rVal + copy(IntToBin(jump(copy(CrInstr.crInstr, 1, pos(' ',CrInstr.crInstr)-1), tmpInt) - tmpInt, 32), 29, 4);
+      rVal := rVal + copy(IntToBin(jump(copy(CrInstr.crInstr, 1, pos(' ',CrInstr.crInstr)-1), tmpInt) - tmpInt), 29, 4);
       rVal := rVal + '000';
 
       rVal := rVal + GetAdrMode(CrInstr.madD, CrInstr.valRD, memAdr + memInc);
@@ -1566,9 +1564,9 @@ begin
     begin
       rVal := rVal + '001';
       tmpInt := jump('BR');
-      rVal := rVal + copy(IntToBin(jump(copy(CrInstr.crInstr, 1, pos(' ',CrInstr.crInstr)-1), tmpInt) - tmpInt, 32), 28, 5);
+      rVal := rVal + copy(IntToBin(jump(copy(CrInstr.crInstr, 1, pos(' ',CrInstr.crInstr)-1), tmpInt) - tmpInt), 28, 5);
 
-      rVal := rVal + copy(IntToBin(StrToInt(CrInstr.valRD), 32), 25, 8);
+      rVal := rVal + copy(IntToBin(StrToInt(CrInstr.valRD)), 25, 8);
 
       memWrite(memAdr, RegToInt(rVal));
       memAdr := memAdr + memInc;
@@ -1588,7 +1586,7 @@ begin
     begin
       rVal := rVal + '010';
       tmpInt := jump('BR');
-      rVal := rVal + copy(IntToBin(jump(CrInstr.crInstr, tmpInt) - tmpInt, 32), 28, 5);
+      rVal := rVal + copy(IntToBin(jump(CrInstr.crInstr, tmpInt) - tmpInt), 28, 5);
       rVal := rVal + '00000000';
 
       memWrite(memAdr, RegToInt(rVal));
@@ -1701,4 +1699,4 @@ begin
 end;//procedure TCPU.SetMemSz(sz: Integer);
 
 end.
-
+

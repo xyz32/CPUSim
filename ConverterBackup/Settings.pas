@@ -1,11 +1,9 @@
 unit Settings;
 
-{$MODE Delphi}
-
 interface
 
 uses
-  LCLIntf, LCLType, LMessages, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Spin;
 
 type
@@ -31,7 +29,7 @@ implementation
 
 uses main;
 
-{$R *.lfm}
+{$R *.dfm}
 
 procedure TForm3.Button2Click(Sender: TObject);
 begin
