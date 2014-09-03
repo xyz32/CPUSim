@@ -37,16 +37,6 @@ begin
     if dur = 0 then
       for i:=1 to 1000 do
       begin
-        {if PeekMessage(Msg, 0, 0, 0, PM_REMOVE) then
-        begin
-          If Msg.message = WM_QUIT Then
-          begin
-            PostQuitMessage(msg.wparam);
-            Break;
-          end;
-          TranslateMessage(Msg);
-          DispatchMessage(Msg);
-        end;}
         application.ProcessMessages;
       end;
 end;
@@ -58,16 +48,6 @@ var
 begin
   targettime := GetTickCount + msecs;
   while targettime > GetTickCount do
-    {if PeekMessage(Msg, 0, 0, 0, PM_REMOVE) then
-    begin
-      If Msg.message = WM_QUIT Then
-      begin
-        PostQuitMessage(msg.wparam);
-        Break;
-      end;
-      TranslateMessage(Msg);
-      DispatchMessage(Msg);
-    end;}
     application.ProcessMessages;
 end;
 

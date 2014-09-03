@@ -29,6 +29,7 @@ type
     procedure DrowALU(tmpX: Integer; tmpY: Integer; Use: Boolean);
     procedure DrowMUX(tmpX: Integer; tmpY: Integer; Use: Boolean);
     procedure DrowBGC(tmpXs: Integer; tmpYs: Integer; tmpXe: Integer; tmpYe: Integer; tmpTyp: String);
+    procedure DrowResetImg();
   public
     constructor Create(tmpOwn: TObject);
     procedure ResetCpu();
@@ -277,6 +278,16 @@ begin
   end;
 end;//procedure TGfrCpu.DrowBuss(tmpOwn: TObject; tmpX: Integer; tmpY: Integer; tmpSz: Integer; tmpName: String; Use: Boolean);
 
+procedure TGrfCpu.DrowResetImg();
+begin
+  with (Own as TImage) do
+  begin
+    Canvas.Pen.Color := clWhite;
+    Canvas.Brush.Color := clWhite;
+    Canvas.Clear;
+  end;
+end;
+
 constructor TGrfCpu.Create(tmpOwn: TObject);
 begin
   own := tmpOwn;
@@ -287,6 +298,8 @@ var
   i: Integer;
   sel: Boolean;
 begin
+  DrowResetImg();
+
   sel := false;
   DrowALU(300, 15, sel);
 
