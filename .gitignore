@@ -1,5 +1,10 @@
 # Lazarus
+backup/
+lib/
+*.compiled
 *.o
+*.or
+*.ppu
 
 # Delphi compiler-generated binaries (safe to delete)
 *.exe
