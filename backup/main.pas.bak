@@ -13,13 +13,14 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    ListView1: TListView;
+    ListView2: TListView;
     PopupMenu1: TPopupMenu;
     AddBreakPoint1: TMenuItem;
     Button1: TButton;
     GroupBox1: TGroupBox;
     MainMenu1: TMainMenu;
     File1: TMenuItem;
-    ListView1: TListView;
     LabeledEdit1: TLabeledEdit;
     LabeledEdit2: TLabeledEdit;
     LabeledEdit3: TLabeledEdit;
@@ -29,7 +30,6 @@ type
     LabeledEdit7: TLabeledEdit;
     Image1: TImage;
     Label1: TLabel;
-    ListView2: TListView;
     Label2: TLabel;
     LabeledEdit8: TLabeledEdit;
     Button2: TButton;

@@ -1,10 +1,10 @@
 object Form1: TForm1
   Left = 410
   Height = 695
-  Top = 178
+  Top = 180
   Width = 773
   Caption = 'CPU SIM'
-  ClientHeight = 677
+  ClientHeight = 676
   ClientWidth = 773
   Color = clBtnFace
   Constraints.MinHeight = 612
@@ -23,7 +23,7 @@ object Form1: TForm1
     Left = 456
     Height = 25
     Hint = 'Step By Step (F7)'
-    Top = 598
+    Top = 597
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Step'
@@ -75,8 +75,36 @@ object Form1: TForm1
       Width = 225
       BevelOuter = bvNone
       Caption = 'Memory View'
+      ClientHeight = 73
+      ClientWidth = 225
       DockSite = True
-      TabOrder = 11
+      TabOrder = 9
+      object ListView2: TListView
+        Left = 0
+        Height = 73
+        Top = 0
+        Width = 225
+        Columns = <        
+          item
+            Caption = 'Val'
+            Width = 105
+          end        
+          item
+            Caption = 'HEX'
+          end        
+          item
+            Caption = 'adr'
+          end>
+        ColumnClick = False
+        DragKind = dkDock
+        DragMode = dmAutomatic
+        GridLines = True
+        RowSelect = True
+        TabOrder = 0
+        ViewStyle = vsReport
+        OnKeyDown = LabeledEdit1KeyDown
+        OnKeyPress = LabeledEdit1KeyPress
+      end
     end
     object Panel1: TPanel
       Left = 254
@@ -84,32 +112,33 @@ object Form1: TForm1
       Top = 140
       Width = 160
       Caption = 'General registers'
+      ClientHeight = 72
+      ClientWidth = 160
       DockSite = True
-      TabOrder = 10
-    end
-    object ListView1: TListView
-      Left = 254
-      Height = 73
-      Top = 140
-      Width = 161
-      Columns = <      
-        item
-          Caption = 'Val'
-          Width = 105
-        end      
-        item
-          Caption = 'regN'
-          Width = 35
-        end>
-      DragKind = dkDock
-      DragMode = dmAutomatic
-      GridLines = True
-      RowSelect = True
-      ShowColumnHeaders = False
-      TabOrder = 0
-      ViewStyle = vsReport
-      OnKeyDown = LabeledEdit1KeyDown
-      OnKeyPress = LabeledEdit1KeyPress
+      TabOrder = 8
+      object ListView1: TListView
+        Left = 0
+        Height = 73
+        Top = 0
+        Width = 161
+        Columns = <        
+          item
+            Caption = 'Val'
+            Width = 105
+          end        
+          item
+            Caption = 'regN'
+            Width = 35
+          end>
+        DragKind = dkDock
+        DragMode = dmAutomatic
+        GridLines = True
+        RowSelect = True
+        TabOrder = 0
+        ViewStyle = vsReport
+        OnKeyDown = LabeledEdit1KeyDown
+        OnKeyPress = LabeledEdit1KeyPress
+      end
     end
     object LabeledEdit1: TLabeledEdit
       Left = 254
@@ -129,10 +158,10 @@ object Form1: TForm1
       EditLabel.Layout = tlCenter
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Liberation Mono'
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 0
       Text = '1000110110111101'
       OnKeyDown = LabeledEdit1KeyDown
       OnKeyPress = LabeledEdit1KeyPress
@@ -154,10 +183,10 @@ object Form1: TForm1
       EditLabel.ParentColor = False
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Liberation Mono'
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 1
       Text = '1000110110111101'
       OnKeyDown = LabeledEdit1KeyDown
       OnKeyPress = LabeledEdit1KeyPress
@@ -179,10 +208,10 @@ object Form1: TForm1
       EditLabel.ParentColor = False
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Liberation Mono'
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 2
       Text = '1000110111101101'
       OnKeyDown = LabeledEdit1KeyDown
       OnKeyPress = LabeledEdit1KeyPress
@@ -204,10 +233,10 @@ object Form1: TForm1
       EditLabel.ParentColor = False
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Liberation Mono'
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 3
       Text = '1000110111101101'
       OnKeyDown = LabeledEdit1KeyDown
       OnKeyPress = LabeledEdit1KeyPress
@@ -229,10 +258,10 @@ object Form1: TForm1
       EditLabel.ParentColor = False
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Liberation Mono'
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
       ParentFont = False
-      TabOrder = 5
+      TabOrder = 4
       Text = '1000110111101101'
       OnKeyDown = LabeledEdit1KeyDown
       OnKeyPress = LabeledEdit1KeyPress
@@ -254,10 +283,10 @@ object Form1: TForm1
       EditLabel.ParentColor = False
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Liberation Mono'
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
       ParentFont = False
-      TabOrder = 6
+      TabOrder = 5
       Text = '1000110110111101'
       OnKeyDown = LabeledEdit1KeyDown
       OnKeyPress = LabeledEdit1KeyPress
@@ -279,37 +308,11 @@ object Form1: TForm1
       EditLabel.ParentColor = False
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Liberation Mono'
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
       ParentFont = False
-      TabOrder = 7
+      TabOrder = 6
       Text = '1000110110111101'
-      OnKeyDown = LabeledEdit1KeyDown
-      OnKeyPress = LabeledEdit1KeyPress
-    end
-    object ListView2: TListView
-      Left = 126
-      Height = 73
-      Top = 532
-      Width = 225
-      Columns = <      
-        item
-          Caption = 'Val'
-          Width = 105
-        end      
-        item
-          Caption = 'HEX'
-        end      
-        item
-          Caption = 'adr'
-        end>
-      ColumnClick = False
-      DragKind = dkDock
-      DragMode = dmAutomatic
-      GridLines = True
-      RowSelect = True
-      TabOrder = 8
-      ViewStyle = vsReport
       OnKeyDown = LabeledEdit1KeyDown
       OnKeyPress = LabeledEdit1KeyPress
     end
@@ -330,10 +333,10 @@ object Form1: TForm1
       EditLabel.ParentColor = False
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Liberation Mono'
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
       ParentFont = False
-      TabOrder = 9
+      TabOrder = 7
       Text = '1000110110110101'
     end
   end
@@ -341,7 +344,7 @@ object Form1: TForm1
     Left = 618
     Height = 25
     Hint = 'Reset CPU (F2)'
-    Top = 598
+    Top = 597
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Reset CPU'
@@ -354,7 +357,7 @@ object Form1: TForm1
     Left = 538
     Height = 25
     Hint = 'Run Program (F9)'
-    Top = 598
+    Top = 597
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Run'
@@ -366,7 +369,7 @@ object Form1: TForm1
   object CheckBox1: TCheckBox
     Left = 456
     Height = 26
-    Top = 565
+    Top = 564
     Width = 67
     Anchors = [akLeft, akBottom]
     Caption = 'ACLOW'
@@ -375,7 +378,7 @@ object Form1: TForm1
   object CheckBox2: TCheckBox
     Left = 528
     Height = 26
-    Top = 565
+    Top = 564
     Width = 45
     Anchors = [akLeft, akBottom]
     Caption = 'CIL'
@@ -384,7 +387,7 @@ object Form1: TForm1
   object CheckBox3: TCheckBox
     Left = 576
     Height = 26
-    Top = 565
+    Top = 564
     Width = 53
     Anchors = [akLeft, akBottom]
     Caption = 'INTR'
@@ -392,36 +395,36 @@ object Form1: TForm1
   end
   object GroupBox4: TGroupBox
     Left = 456
-    Height = 567
+    Height = 566
     Top = 0
     Width = 305
     Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = 'Text Sim:'
-    ClientHeight = 538
+    ClientHeight = 537
     ClientWidth = 301
     TabOrder = 7
     object Splitter1: TSplitter
       Cursor = crVSplit
       Left = 0
       Height = 6
-      Top = 283
+      Top = 282
       Width = 301
       Align = alBottom
       ResizeAnchor = akBottom
     end
     object GroupBox2: TGroupBox
       Left = 0
-      Height = 283
+      Height = 282
       Top = 0
       Width = 301
       Align = alClient
       Caption = 'Instructiuni:'
-      ClientHeight = 254
+      ClientHeight = 253
       ClientWidth = 297
       TabOrder = 0
       object RichEdit1: TMemo
         Left = 0
-        Height = 221
+        Height = 220
         Top = 1
         Width = 297
         Anchors = [akTop, akLeft, akRight, akBottom]
@@ -432,7 +435,7 @@ object Form1: TForm1
       object Edit2: TEdit
         Left = 6
         Height = 19
-        Top = 231
+        Top = 230
         Width = 289
         Anchors = [akLeft, akRight, akBottom]
         ReadOnly = True
@@ -442,7 +445,7 @@ object Form1: TForm1
     object GroupBox3: TGroupBox
       Left = 0
       Height = 249
-      Top = 289
+      Top = 288
       Width = 301
       Align = alBottom
       Caption = 'MicroInstructiuni:'

@@ -81,7 +81,7 @@
         <UnitName Value="Settings"/>
         <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="18"/>
+        <TopLine Value="17"/>
         <CursorPos X="20" Y="33"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
@@ -112,7 +112,7 @@
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="28" HistoryIndex="27">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="Cpu.pas"/>
         <Caret Line="1152" Column="15" TopLine="1137"/>
@@ -225,6 +225,10 @@
         <Filename Value="GrfCpu.pas"/>
         <Caret Line="285" Column="32" TopLine="271"/>
       </Position28>
+      <Position29>
+        <Filename Value="main.pas"/>
+        <Caret Line="8" Column="21" TopLine="8"/>
+      </Position29>
     </JumpHistory>
   </ProjectSession>
   <EditorMacros Count="0"/>
