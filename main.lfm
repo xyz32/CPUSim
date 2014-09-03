@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 281
+  Left = 410
   Height = 695
-  Top = 180
+  Top = 178
   Width = 773
   Caption = 'CPU SIM'
-  ClientHeight = 676
+  ClientHeight = 677
   ClientWidth = 773
   Color = clBtnFace
   Constraints.MinHeight = 612
@@ -23,7 +23,7 @@ object Form1: TForm1
     Left = 456
     Height = 25
     Hint = 'Step By Step (F7)'
-    Top = 597
+    Top = 598
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Step'
@@ -34,18 +34,18 @@ object Form1: TForm1
   end
   object GroupBox1: TGroupBox
     Left = 0
-    Height = 649
+    Height = 672
     Top = 0
     Width = 451
     Caption = 'Visual Sim:'
-    ClientHeight = 620
+    ClientHeight = 643
     ClientWidth = 447
     Color = clBtnFace
     ParentColor = False
     TabOrder = 1
     object Image1: TImage
       Left = 0
-      Height = 620
+      Height = 643
       Top = 0
       Width = 447
       Align = alClient
@@ -113,7 +113,7 @@ object Form1: TForm1
     end
     object LabeledEdit1: TLabeledEdit
       Left = 254
-      Height = 19
+      Height = 18
       Top = 90
       Width = 105
       EditLabel.AnchorSideLeft.Control = LabeledEdit1
@@ -127,7 +127,11 @@ object Form1: TForm1
       EditLabel.Caption = 'FLAGS'
       EditLabel.ParentColor = False
       EditLabel.Layout = tlCenter
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
+      ParentFont = False
       TabOrder = 1
       Text = '1000110110111101'
       OnKeyDown = LabeledEdit1KeyDown
@@ -135,7 +139,7 @@ object Form1: TForm1
     end
     object LabeledEdit2: TLabeledEdit
       Left = 254
-      Height = 19
+      Height = 18
       Top = 242
       Width = 105
       EditLabel.AnchorSideLeft.Control = LabeledEdit2
@@ -148,7 +152,11 @@ object Form1: TForm1
       EditLabel.Width = 105
       EditLabel.Caption = 'SP'
       EditLabel.ParentColor = False
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
+      ParentFont = False
       TabOrder = 2
       Text = '1000110110111101'
       OnKeyDown = LabeledEdit1KeyDown
@@ -156,7 +164,7 @@ object Form1: TForm1
     end
     object LabeledEdit3: TLabeledEdit
       Left = 254
-      Height = 19
+      Height = 18
       Top = 290
       Width = 105
       EditLabel.AnchorSideLeft.Control = LabeledEdit3
@@ -169,7 +177,11 @@ object Form1: TForm1
       EditLabel.Width = 105
       EditLabel.Caption = 'T'
       EditLabel.ParentColor = False
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
+      ParentFont = False
       TabOrder = 3
       Text = '1000110111101101'
       OnKeyDown = LabeledEdit1KeyDown
@@ -177,7 +189,7 @@ object Form1: TForm1
     end
     object LabeledEdit4: TLabeledEdit
       Left = 254
-      Height = 19
+      Height = 18
       Top = 338
       Width = 105
       EditLabel.AnchorSideLeft.Control = LabeledEdit4
@@ -190,7 +202,11 @@ object Form1: TForm1
       EditLabel.Width = 105
       EditLabel.Caption = 'PC'
       EditLabel.ParentColor = False
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
+      ParentFont = False
       TabOrder = 4
       Text = '1000110111101101'
       OnKeyDown = LabeledEdit1KeyDown
@@ -198,7 +214,7 @@ object Form1: TForm1
     end
     object LabeledEdit5: TLabeledEdit
       Left = 254
-      Height = 19
+      Height = 18
       Top = 386
       Width = 105
       EditLabel.AnchorSideLeft.Control = LabeledEdit5
@@ -211,7 +227,11 @@ object Form1: TForm1
       EditLabel.Width = 105
       EditLabel.Caption = 'IVR'
       EditLabel.ParentColor = False
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
+      ParentFont = False
       TabOrder = 5
       Text = '1000110111101101'
       OnKeyDown = LabeledEdit1KeyDown
@@ -219,7 +239,7 @@ object Form1: TForm1
     end
     object LabeledEdit6: TLabeledEdit
       Left = 254
-      Height = 19
+      Height = 18
       Top = 434
       Width = 105
       EditLabel.AnchorSideLeft.Control = LabeledEdit6
@@ -232,7 +252,11 @@ object Form1: TForm1
       EditLabel.Width = 105
       EditLabel.Caption = 'ADR'
       EditLabel.ParentColor = False
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
+      ParentFont = False
       TabOrder = 6
       Text = '1000110110111101'
       OnKeyDown = LabeledEdit1KeyDown
@@ -240,7 +264,7 @@ object Form1: TForm1
     end
     object LabeledEdit7: TLabeledEdit
       Left = 254
-      Height = 19
+      Height = 18
       Top = 482
       Width = 105
       EditLabel.AnchorSideLeft.Control = LabeledEdit7
@@ -253,7 +277,11 @@ object Form1: TForm1
       EditLabel.Width = 105
       EditLabel.Caption = 'MDR'
       EditLabel.ParentColor = False
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
+      ParentFont = False
       TabOrder = 7
       Text = '1000110110111101'
       OnKeyDown = LabeledEdit1KeyDown
@@ -287,7 +315,7 @@ object Form1: TForm1
     end
     object LabeledEdit8: TLabeledEdit
       Left = 22
-      Height = 19
+      Height = 18
       Top = 426
       Width = 105
       EditLabel.AnchorSideLeft.Control = LabeledEdit8
@@ -300,7 +328,11 @@ object Form1: TForm1
       EditLabel.Width = 105
       EditLabel.Caption = 'IR'
       EditLabel.ParentColor = False
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Liberation Sans Narrow'
       MaxLength = 16
+      ParentFont = False
       TabOrder = 9
       Text = '1000110110110101'
     end
@@ -309,7 +341,7 @@ object Form1: TForm1
     Left = 618
     Height = 25
     Hint = 'Reset CPU (F2)'
-    Top = 597
+    Top = 598
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Reset CPU'
@@ -322,7 +354,7 @@ object Form1: TForm1
     Left = 538
     Height = 25
     Hint = 'Run Program (F9)'
-    Top = 597
+    Top = 598
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Run'
@@ -334,7 +366,7 @@ object Form1: TForm1
   object CheckBox1: TCheckBox
     Left = 456
     Height = 26
-    Top = 564
+    Top = 565
     Width = 67
     Anchors = [akLeft, akBottom]
     Caption = 'ACLOW'
@@ -343,7 +375,7 @@ object Form1: TForm1
   object CheckBox2: TCheckBox
     Left = 528
     Height = 26
-    Top = 564
+    Top = 565
     Width = 45
     Anchors = [akLeft, akBottom]
     Caption = 'CIL'
@@ -352,7 +384,7 @@ object Form1: TForm1
   object CheckBox3: TCheckBox
     Left = 576
     Height = 26
-    Top = 564
+    Top = 565
     Width = 53
     Anchors = [akLeft, akBottom]
     Caption = 'INTR'
@@ -360,36 +392,36 @@ object Form1: TForm1
   end
   object GroupBox4: TGroupBox
     Left = 456
-    Height = 566
+    Height = 567
     Top = 0
     Width = 305
     Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = 'Text Sim:'
-    ClientHeight = 537
+    ClientHeight = 538
     ClientWidth = 301
     TabOrder = 7
     object Splitter1: TSplitter
       Cursor = crVSplit
       Left = 0
       Height = 6
-      Top = 282
+      Top = 283
       Width = 301
       Align = alBottom
       ResizeAnchor = akBottom
     end
     object GroupBox2: TGroupBox
       Left = 0
-      Height = 282
+      Height = 283
       Top = 0
       Width = 301
       Align = alClient
       Caption = 'Instructiuni:'
-      ClientHeight = 253
+      ClientHeight = 254
       ClientWidth = 297
       TabOrder = 0
       object RichEdit1: TMemo
         Left = 0
-        Height = 220
+        Height = 221
         Top = 1
         Width = 297
         Anchors = [akTop, akLeft, akRight, akBottom]
@@ -400,7 +432,7 @@ object Form1: TForm1
       object Edit2: TEdit
         Left = 6
         Height = 19
-        Top = 230
+        Top = 231
         Width = 289
         Anchors = [akLeft, akRight, akBottom]
         ReadOnly = True
@@ -410,7 +442,7 @@ object Form1: TForm1
     object GroupBox3: TGroupBox
       Left = 0
       Height = 249
-      Top = 288
+      Top = 289
       Width = 301
       Align = alBottom
       Caption = 'MicroInstructiuni:'
