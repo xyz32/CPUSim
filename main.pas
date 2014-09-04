@@ -6,7 +6,8 @@ interface
 
 uses
   LCLIntf, LCLType, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus, StdCtrls, ComCtrls, ExtCtrls, Cpu, InOutUtils;
+  Dialogs, Menus, StdCtrls, ComCtrls, ExtCtrls, SynEdit, SynCompletion,
+  SynHighlighterAny, Cpu, InOutUtils;
 
 type
 
@@ -34,6 +35,11 @@ type
     LabeledEdit8: TLabeledEdit;
     Button2: TButton;
     Button3: TButton;
+    ASMCodeEditor1: TSynEdit;
+    SynAnySyn1: TSynAnySyn;
+    SynAnySyn2: TSynAnySyn;
+    SynCompletion1: TSynCompletion;
+    MicrocodeEdit1: TSynEdit;
     Timer1: TTimer;
     Save1: TMenuItem;
     SaveDialog1: TSaveDialog;
@@ -56,10 +62,8 @@ type
     GroupBox4: TGroupBox;
     Splitter1: TSplitter;
     GroupBox2: TGroupBox;
-    RichEdit1: TMemo;
     Edit2: TEdit;
     GroupBox3: TGroupBox;
-    RichEdit2: TMemo;
     Edit1: TEdit;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -137,13 +141,13 @@ procedure TForm1.SetCrMInstr(crPoz: String);
     mInst := copy(crText, 1, pos(':', crText));
     mCod := copy(crText, pos(':', crText)+1, length(crText));
 
-    RichEdit2.SelStart := pos(mInst, UpperCase(RichEdit2.Text))-1;
-    RichEdit2.SelLength := Length(mInst);
+    //MicrocodeEdit1.SelStart := pos(mInst, UpperCase(MicrocodeEdit1.Text))-1;
+    //MicrocodeEdit1.SelLength := Length(mInst);
 
-    tmp := copy(RichEdit2.Text, pos(mInst, UpperCase(RichEdit2.Text)), Length(RichEdit2.Text));
+    tmp := copy(MicrocodeEdit1.Text, pos(mInst, UpperCase(MicrocodeEdit1.Text)), Length(MicrocodeEdit1.Text));
     tmpint := pos(mCod, UpperCase(tmp));
-    RichEdit2.SelStart := tmpint + pos(mInst, UpperCase(RichEdit2.Text))-2;
-    RichEdit2.SelLength := Length(mCod);
+    //RichEdit2.SelStart := tmpint + pos(mInst, UpperCase(RichEdit2.Text))-2;
+    //RichEdit2.SelLength := Length(mCod);
   end;
 
 begin
@@ -151,11 +155,11 @@ begin
 
   delete(crPoz, 1, pos(':', crPoz));
 
-  RichEdit2.Lines.BeginUpdate;
+  MicrocodeEdit1.Lines.BeginUpdate;
 
   SelText(crPoz);
 
-  RichEdit2.Lines.EndUpdate;
+  MicrocodeEdit1.Lines.EndUpdate;
 
   Edit1.Text := crPoz;
 end;
@@ -171,7 +175,7 @@ begin
   end
   else
   begin
-    cmpCPU.LoadCode(RichEdit1.Lines);
+    cmpCPU.LoadCode(ASMCodeEditor1.Lines);
     cmpCPU.setCpuIntr(CheckBox2.Checked, CheckBox1.Checked, CheckBox3.Checked);
     SetCrMInstr(cmpCpu.step);
     RefreshCpuStat;
@@ -222,7 +226,7 @@ begin
     if not cmpCPU.GetCPUStatus then
     begin
       cmpCPU.setCpuIntr(CheckBox2.Checked, CheckBox1.Checked, CheckBox3.Checked);
-      cmpCPU.LoadCode(RichEdit1.Lines);
+      cmpCPU.LoadCode(ASMCodeEditor1.Lines);
     end;
       timer1.Enabled := true;
       Button3.Caption := 'Stop';
@@ -236,7 +240,7 @@ end;
 
 procedure TForm1.FormShow(Sender: TObject);
 begin
-  RichEdit2.Lines.LoadFromFile(ExtractFilePath(Application.ExeName)+'microcod.dat');
+  MicrocodeEdit1.Lines.LoadFromFile(ExtractFilePath(Application.ExeName)+'microcod.dat');
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -248,21 +252,21 @@ end;
 procedure TForm1.Save1Click(Sender: TObject);
 begin
   if SaveDialog1.Execute then
-    RichEdit1.Lines.SaveToFile(SaveDialog1.FileName);
+    ASMCodeEditor1.Lines.SaveToFile(SaveDialog1.FileName);
 end;
 
 procedure TForm1.Opent1Click(Sender: TObject);
 begin
   if OpenDialog1.Execute then
   begin
-    RichEdit1.Lines.LoadFromFile(OpenDialog1.FileName);
+    ASMCodeEditor1.Lines.LoadFromFile(OpenDialog1.FileName);
     Button2Click(Sender);
   end;
 end;
 
 procedure TForm1.new1Click(Sender: TObject);
 begin
-  RichEdit1.Clear;
+  ASMCodeEditor1.Lines.Clear;
   Button2Click(Sender);
 end;
 
