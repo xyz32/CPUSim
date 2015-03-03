@@ -301,7 +301,7 @@ var
   regEnd: Integer;
   sel: Boolean;
 begin
-  regEnd := Form1.LabeledEdit1.Left + Form1.LabeledEdit1.Width;
+  regEnd := MainForm.LabeledEdit1.Left + MainForm.LabeledEdit1.Width;
   DrowResetImg();
 
   sel := false;
@@ -709,7 +709,7 @@ var
   i: Integer;
   regEnd: Integer;
 begin
-  regEnd := Form1.LabeledEdit1.Left + Form1.LabeledEdit1.Width;
+  regEnd := MainForm.LabeledEdit1.Left + MainForm.LabeledEdit1.Width;
   sel := True;
 
   DrowBuss(430, 15, 485, 'RBus(16 b)', sel);//RBus

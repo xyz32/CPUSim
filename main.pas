@@ -11,9 +11,9 @@ uses
 
 type
 
-  { TForm1 }
+  { TMainForm }
 
-  TForm1 = class(TForm)
+  TMainForm = class(TForm)
     ListView1: TListView;
     ListView2: TListView;
     PopupMenu1: TPopupMenu;
@@ -93,7 +93,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  MainForm: TMainForm;
   cmpCpu: TCPU;
   codPos: Integer = 0;
   keys: array[0..255] of boolean;
@@ -104,7 +104,7 @@ uses about, Settings;
 
 {$R *.lfm}
 
-{Procedure Tform1.WNDPROC(var msg:TMessage);
+{Procedure TMainForm.WNDPROC(var msg:TMessage);
 begin
   INHERITED;
   case msg.Msg of
@@ -115,12 +115,12 @@ begin
   end;
 end;}
 
-procedure TForm1.visualSwap;
+procedure TMainForm.visualSwap;
 begin
 
 end;
 
-procedure TForm1.RefreshCpuStat;
+procedure TMainForm.RefreshCpuStat;
 var
   tmpAcLow, tmpCIL, tmpINTR: Boolean;
 begin
@@ -128,9 +128,9 @@ begin
   CheckBox2.Checked := tmpCil;
   CheckBox1.Checked := tmpACLOW;
   CheckBox3.Checked := tmpINTR;
-end;//procedure TForm1.RefreshCpuStat;
+end;//procedure TMainForm.RefreshCpuStat;
 
-procedure TForm1.SetCrMInstr(crPoz: String);
+procedure TMainForm.SetCrMInstr(crPoz: String);
 
   procedure SelText(crText: String);
   var
@@ -164,7 +164,7 @@ begin
   Edit1.Text := crPoz;
 end;
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TMainForm.Button1Click(Sender: TObject);
 
 begin
   if cmpCPU.GetCPUStatus then
@@ -184,7 +184,7 @@ begin
   visualSwap;
 end;
 
-procedure TForm1.FormCreate(Sender: TObject);
+procedure TMainForm.FormCreate(Sender: TObject);
 begin
   cmpCpu := TCPU.Create(Image1);
   cmpCPU.RegAssign(LabeledEdit1, ListView1, LabeledEdit2, LabeledEdit3, LabeledEdit4, LabeledEdit5, LabeledEdit6, LabeledEdit7, ListView2, LabeledEdit8);
@@ -192,18 +192,18 @@ begin
   cmpCPU.cpuInit;
 end;
 
-procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
+procedure TMainForm.FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
   );
 begin
   if key<256 then Keys[key]:=true;
 end;
 
-procedure TForm1.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+procedure TMainForm.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 begin
   if key<256 then Keys[key]:=false;
 end;
 
-procedure TForm1.Timer1Timer(Sender: TObject);
+procedure TMainForm.Timer1Timer(Sender: TObject);
 begin
   if cmpCPU.GetCPUStatus then
   begin
@@ -219,7 +219,7 @@ begin
   visualSwap;
 end;
 
-procedure TForm1.Button3Click(Sender: TObject);
+procedure TMainForm.Button3Click(Sender: TObject);
 begin
   if Button3.Caption = 'Run' then
   begin
@@ -238,24 +238,24 @@ begin
   end;
 end;
 
-procedure TForm1.FormShow(Sender: TObject);
+procedure TMainForm.FormShow(Sender: TObject);
 begin
   MicrocodeEdit1.Lines.LoadFromFile(ExtractFilePath(Application.ExeName)+'microcod.dat');
 end;
 
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TMainForm.Button2Click(Sender: TObject);
 begin
   SetCrMInstr(' ');
   cmpCPU.cpuInit;
 end;
 
-procedure TForm1.Save1Click(Sender: TObject);
+procedure TMainForm.Save1Click(Sender: TObject);
 begin
   if SaveDialog1.Execute then
     ASMCodeEditor1.Lines.SaveToFile(SaveDialog1.FileName);
 end;
 
-procedure TForm1.Opent1Click(Sender: TObject);
+procedure TMainForm.Opent1Click(Sender: TObject);
 begin
   if OpenDialog1.Execute then
   begin
@@ -264,23 +264,23 @@ begin
   end;
 end;
 
-procedure TForm1.new1Click(Sender: TObject);
+procedure TMainForm.new1Click(Sender: TObject);
 begin
   ASMCodeEditor1.Lines.Clear;
   Button2Click(Sender);
 end;
 
-procedure TForm1.Exit1Click(Sender: TObject);
+procedure TMainForm.Exit1Click(Sender: TObject);
 begin
   Application.Terminate;
 end;
 
-procedure TForm1.ApplicationEvents1Idle(Sender: TObject;
+procedure TMainForm.ApplicationEvents1Idle(Sender: TObject;
   var Done: Boolean);
 const
   slp:integer= 50;
 begin
-  if (getActiveWindow() = Form1.Handle)and(GroupBox1.Enabled) then
+  if (getActiveWindow() = MainForm.Handle)and(GroupBox1.Enabled) then
   begin
     done := true;
 
@@ -306,24 +306,24 @@ begin
   end;
 end;
 
-procedure TForm1.About2Click(Sender: TObject);
+procedure TMainForm.About2Click(Sender: TObject);
 var
   i: Integer;
 begin
-  Form2.Show;
+  AboutForm.Show;
   for i:=1 to 255 do
   begin
-    Form2.AlphaBlendValue := i;
+    AboutForm.AlphaBlendValue := i;
     application.ProcessMessages;
   end;
 end;
 
-procedure TForm1.CpuSimSettings1Click(Sender: TObject);
+procedure TMainForm.CpuSimSettings1Click(Sender: TObject);
 begin
-  form3.Show;
+  SettingsForm.Show;
 end;
 
-procedure TForm1.LabeledEdit1KeyDown(Sender: TObject; var Key: Word;
+procedure TMainForm.LabeledEdit1KeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if (key <> ord('1')) and (key <> ord('0')) and (key <> 37) and (key <> 38) and (key <> 39) and (key <> 40) and (key <> 8) and (key <> 46) and (key <> 13) and (key <> 35) and (key <> 36) then
@@ -332,7 +332,7 @@ begin
   end;
 end;
 
-procedure TForm1.LabeledEdit1KeyPress(Sender: TObject; var Key: Char);
+procedure TMainForm.LabeledEdit1KeyPress(Sender: TObject; var Key: Char);
 begin
   if (key <> '1') and (key <> '0') and (key <> #37) and (key <> #38) and (key <> #39) and (key <> #40) and (key <> #8) and (key <> #46) and (key <> #13) and (key <> #35) and (key <> #36) then
   begin

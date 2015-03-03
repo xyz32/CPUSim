@@ -9,7 +9,7 @@ uses
   Dialogs, StdCtrls, Spin;
 
 type
-  TForm3 = class(TForm)
+  TSettingsForm = class(TForm)
     Label1: TLabel;
     SpinEdit1: TSpinEdit;
     Label2: TLabel;
@@ -25,7 +25,7 @@ type
   end;
 
 var
-  Form3: TForm3;
+  SettingsForm: TSettingsForm;
 
 implementation
 
@@ -33,16 +33,16 @@ uses main;
 
 {$R *.lfm}
 
-procedure TForm3.Button2Click(Sender: TObject);
+procedure TSettingsForm.Button2Click(Sender: TObject);
 begin
-  Form3.Close;
+  SettingsForm.Close;
 end;
 
-procedure TForm3.Button1Click(Sender: TObject);
+procedure TSettingsForm.Button1Click(Sender: TObject);
 begin
-  Form1.Timer1.Interval := SpinEdit1.value;
+  MainForm.Timer1.Interval := SpinEdit1.value;
   cmpCpu.SetMemSz(SpinEdit2.Value);
-  Form3.Close;
+  SettingsForm.Close;
 end;
 
 end.

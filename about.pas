@@ -9,7 +9,7 @@ uses
   Dialogs, Buttons, StdCtrls, ExtCtrls, GL;
 
 type
-  TForm2 = class(TForm)
+  TAboutForm = class(TForm)
     Image1: TImage;
     Label1: TLabel;
     Label2: TLabel;
@@ -25,16 +25,16 @@ type
   end;
 
 var
-  Form2: TForm2;
+  AboutForm: TAboutForm;
 
 implementation
 
 {$R *.lfm}
 
-procedure TForm2.SpeedButton1Click(Sender: TObject);
+procedure TAboutForm.SpeedButton1Click(Sender: TObject);
 begin
-  Form2.AlphaBlendValue := 1;
-  Form2.Close;
+  AboutForm.AlphaBlendValue := 1;
+  AboutForm.Close;
 end;
 
-end.                      
+end.                      

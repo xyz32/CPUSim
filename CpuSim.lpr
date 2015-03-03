@@ -14,8 +14,8 @@ uses
 
 begin
   Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
-  Application.CreateForm(TForm2, Form2);
-  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TAboutForm, AboutForm);
+  Application.CreateForm(TSettingsForm, SettingsForm);
   Application.Run;
 end.
