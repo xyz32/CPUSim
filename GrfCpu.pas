@@ -69,6 +69,8 @@ type
 
 implementation
 
+uses main;
+
 procedure TGrfCpu.DrowData(tmpXs: Integer; tmpYs: Integer; tmpXe: Integer; tmpYe: Integer; tmpTyp: String; Use: Boolean);
 begin
   with (Own as TImage) do
@@ -296,8 +298,10 @@ end;//constructor TGfrCpu.Create();
 procedure TGrfCpu.ResetCpu();
 var
   i: Integer;
+  regEnd: Integer;
   sel: Boolean;
 begin
+  regEnd := Form1.LabeledEdit1.Left + Form1.LabeledEdit1.Width;
   DrowResetImg();
 
   sel := false;
@@ -315,18 +319,18 @@ begin
   DrowData(400, 95, 380, 95, 'DATA END LEFT', sel);
   //COND
 
-  DrowData(370, 100, 359, 100, 'DATA END LEFT', sel);//MUX -> Flags
+  DrowData(370, 100, regEnd, 100, 'DATA END LEFT', sel);//MUX -> Flags
   DrowData(430, 105, 380, 105, 'DATA START END LEFT', sel);//RBus -> MUX
   DrowData(430, 170, 414, 170, 'DATA START END LEFT', sel);//RBus -> GenReg
 
   //RBus -> Reg
   for i:=1 to 5 do
-    DrowData(430, 250 + (i-1)*48, 361, 250+ (i-1)*48, 'DATA START END LEFT', sel);
+    DrowData(430, 250 + (i-1)*48, regEnd, 250+ (i-1)*48, 'DATA START END LEFT', sel);
   //RBus -> Reg
 
   DrowMUX(370, 475, sel);
   DrowData(430, 485, 380, 485, 'DATA START END LEFT', sel);//RBus -> MUX
-  DrowData(370, 490, 359, 490, 'DATA END LEFT', sel);//Mux -> MDR
+  DrowData(370, 490, regEnd, 490, 'DATA END LEFT', sel);//Mux -> MDR
   //RBus
 
   //DBus
@@ -703,7 +707,9 @@ procedure TGrfCpu.pdRALU;
 var
   sel: Boolean;
   i: Integer;
+  regEnd: Integer;
 begin
+  regEnd := Form1.LabeledEdit1.Left + Form1.LabeledEdit1.Width;
   sel := True;
 
   DrowBuss(430, 15, 485, 'RBus(16 b)', sel);//RBus
@@ -714,7 +720,7 @@ begin
 
   //RBus -> Reg
   for i:=1 to 5 do
-    DrowData(430, 250 + (i-1)*48, 359, 250+ (i-1)*48, 'DATA START END LEFT', sel);
+    DrowData(430, 250 + (i-1)*48, regEnd, 250+ (i-1)*48, 'DATA START END LEFT', sel);
   //RBus -> Reg
 
   DrowData(430, 485, 380, 485, 'DATA START END LEFT', sel);//RBus -> MUX

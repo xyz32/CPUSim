@@ -329,7 +329,7 @@ object Form1: TForm1
       Left = 22
       Height = 17
       Top = 426
-      Width = 105
+      Width = 106
       EditLabel.AnchorSideLeft.Control = LabeledEdit8
       EditLabel.AnchorSideRight.Control = LabeledEdit8
       EditLabel.AnchorSideRight.Side = asrBottom
@@ -337,7 +337,7 @@ object Form1: TForm1
       EditLabel.Left = 22
       EditLabel.Height = 13
       EditLabel.Top = 410
-      EditLabel.Width = 105
+      EditLabel.Width = 106
       EditLabel.Caption = 'IR'
       EditLabel.ParentColor = False
       Font.Color = clWindowText
