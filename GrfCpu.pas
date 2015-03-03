@@ -321,7 +321,7 @@ begin
 
   //RBus -> Reg
   for i:=1 to 5 do
-    DrowData(430, 250 + (i-1)*48, 359, 250+ (i-1)*48, 'DATA START END LEFT', sel);
+    DrowData(430, 250 + (i-1)*48, 361, 250+ (i-1)*48, 'DATA START END LEFT', sel);
   //RBus -> Reg
 
   DrowMUX(370, 475, sel);
@@ -899,4 +899,4 @@ begin
   //cmdMem
 end;//procedure TGrfCpu.cmdMem;
 
-end.
+end.
