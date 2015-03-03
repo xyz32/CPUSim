@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 410
+  Left = 524
   Height = 698
-  Top = 180
+  Top = 273
   Width = 1058
   Caption = 'CPU SIM'
   ClientHeight = 680
@@ -18,7 +18,7 @@ object Form1: TForm1
   OnKeyUp = FormKeyUp
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.2.4.0'
+  LCLVersion = '1.4.0.2'
   object Button1: TButton
     Left = 456
     Height = 25
@@ -64,8 +64,8 @@ object Form1: TForm1
       Left = 126
       Height = 13
       Top = 514
-      Width = 49
-      Caption = 'Memorie'
+      Width = 45
+      Caption = 'Memory'
       ParentColor = False
     end
     object Panel2: TPanel
@@ -91,6 +91,7 @@ object Form1: TForm1
           end        
           item
             Caption = 'HEX'
+            Width = 49
           end        
           item
             Caption = 'adr'
@@ -100,7 +101,7 @@ object Form1: TForm1
         DragMode = dmAutomatic
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Liberation Sans Narrow'
+        Font.Name = 'Liberation Mono'
         GridLines = True
         ParentFont = False
         RowSelect = True
@@ -138,7 +139,7 @@ object Form1: TForm1
         DragMode = dmAutomatic
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Liberation Sans Narrow'
+        Font.Name = 'Liberation Mono'
         GridLines = True
         ParentFont = False
         RowSelect = True
@@ -150,9 +151,9 @@ object Form1: TForm1
     end
     object LabeledEdit1: TLabeledEdit
       Left = 254
-      Height = 18
+      Height = 17
       Top = 90
-      Width = 105
+      Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit1
       EditLabel.AnchorSideRight.Control = LabeledEdit1
       EditLabel.AnchorSideRight.Side = asrBottom
@@ -160,13 +161,13 @@ object Form1: TForm1
       EditLabel.Left = 254
       EditLabel.Height = 13
       EditLabel.Top = 74
-      EditLabel.Width = 105
+      EditLabel.Width = 107
       EditLabel.Caption = 'FLAGS'
       EditLabel.ParentColor = False
       EditLabel.Layout = tlCenter
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Liberation Sans Narrow'
+      Font.Height = -10
+      Font.Name = 'Liberation Mono'
       MaxLength = 16
       ParentFont = False
       TabOrder = 0
@@ -176,9 +177,9 @@ object Form1: TForm1
     end
     object LabeledEdit2: TLabeledEdit
       Left = 254
-      Height = 18
+      Height = 17
       Top = 242
-      Width = 105
+      Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit2
       EditLabel.AnchorSideRight.Control = LabeledEdit2
       EditLabel.AnchorSideRight.Side = asrBottom
@@ -186,12 +187,12 @@ object Form1: TForm1
       EditLabel.Left = 254
       EditLabel.Height = 13
       EditLabel.Top = 226
-      EditLabel.Width = 105
+      EditLabel.Width = 107
       EditLabel.Caption = 'SP'
       EditLabel.ParentColor = False
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Liberation Sans Narrow'
+      Font.Height = -10
+      Font.Name = 'Liberation Mono'
       MaxLength = 16
       ParentFont = False
       TabOrder = 1
@@ -201,9 +202,9 @@ object Form1: TForm1
     end
     object LabeledEdit3: TLabeledEdit
       Left = 254
-      Height = 18
+      Height = 17
       Top = 290
-      Width = 105
+      Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit3
       EditLabel.AnchorSideRight.Control = LabeledEdit3
       EditLabel.AnchorSideRight.Side = asrBottom
@@ -211,12 +212,12 @@ object Form1: TForm1
       EditLabel.Left = 254
       EditLabel.Height = 13
       EditLabel.Top = 274
-      EditLabel.Width = 105
+      EditLabel.Width = 107
       EditLabel.Caption = 'T'
       EditLabel.ParentColor = False
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Liberation Sans Narrow'
+      Font.Height = -10
+      Font.Name = 'Liberation Mono'
       MaxLength = 16
       ParentFont = False
       TabOrder = 2
@@ -226,9 +227,9 @@ object Form1: TForm1
     end
     object LabeledEdit4: TLabeledEdit
       Left = 254
-      Height = 18
+      Height = 17
       Top = 338
-      Width = 105
+      Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit4
       EditLabel.AnchorSideRight.Control = LabeledEdit4
       EditLabel.AnchorSideRight.Side = asrBottom
@@ -236,12 +237,12 @@ object Form1: TForm1
       EditLabel.Left = 254
       EditLabel.Height = 13
       EditLabel.Top = 322
-      EditLabel.Width = 105
+      EditLabel.Width = 107
       EditLabel.Caption = 'PC'
       EditLabel.ParentColor = False
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Liberation Sans Narrow'
+      Font.Height = -10
+      Font.Name = 'Liberation Mono'
       MaxLength = 16
       ParentFont = False
       TabOrder = 3
@@ -251,9 +252,9 @@ object Form1: TForm1
     end
     object LabeledEdit5: TLabeledEdit
       Left = 254
-      Height = 18
+      Height = 17
       Top = 386
-      Width = 105
+      Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit5
       EditLabel.AnchorSideRight.Control = LabeledEdit5
       EditLabel.AnchorSideRight.Side = asrBottom
@@ -261,12 +262,12 @@ object Form1: TForm1
       EditLabel.Left = 254
       EditLabel.Height = 13
       EditLabel.Top = 370
-      EditLabel.Width = 105
+      EditLabel.Width = 107
       EditLabel.Caption = 'IVR'
       EditLabel.ParentColor = False
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Liberation Sans Narrow'
+      Font.Height = -10
+      Font.Name = 'Liberation Mono'
       MaxLength = 16
       ParentFont = False
       TabOrder = 4
@@ -276,9 +277,9 @@ object Form1: TForm1
     end
     object LabeledEdit6: TLabeledEdit
       Left = 254
-      Height = 18
+      Height = 17
       Top = 434
-      Width = 105
+      Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit6
       EditLabel.AnchorSideRight.Control = LabeledEdit6
       EditLabel.AnchorSideRight.Side = asrBottom
@@ -286,12 +287,12 @@ object Form1: TForm1
       EditLabel.Left = 254
       EditLabel.Height = 13
       EditLabel.Top = 418
-      EditLabel.Width = 105
+      EditLabel.Width = 107
       EditLabel.Caption = 'ADR'
       EditLabel.ParentColor = False
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Liberation Sans Narrow'
+      Font.Height = -10
+      Font.Name = 'Liberation Mono'
       MaxLength = 16
       ParentFont = False
       TabOrder = 5
@@ -301,9 +302,9 @@ object Form1: TForm1
     end
     object LabeledEdit7: TLabeledEdit
       Left = 254
-      Height = 18
+      Height = 17
       Top = 482
-      Width = 105
+      Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit7
       EditLabel.AnchorSideRight.Control = LabeledEdit7
       EditLabel.AnchorSideRight.Side = asrBottom
@@ -311,12 +312,12 @@ object Form1: TForm1
       EditLabel.Left = 254
       EditLabel.Height = 13
       EditLabel.Top = 466
-      EditLabel.Width = 105
+      EditLabel.Width = 107
       EditLabel.Caption = 'MDR'
       EditLabel.ParentColor = False
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Liberation Sans Narrow'
+      Font.Height = -10
+      Font.Name = 'Liberation Mono'
       MaxLength = 16
       ParentFont = False
       TabOrder = 6
@@ -326,7 +327,7 @@ object Form1: TForm1
     end
     object LabeledEdit8: TLabeledEdit
       Left = 22
-      Height = 18
+      Height = 17
       Top = 426
       Width = 105
       EditLabel.AnchorSideLeft.Control = LabeledEdit8
@@ -340,8 +341,8 @@ object Form1: TForm1
       EditLabel.Caption = 'IR'
       EditLabel.ParentColor = False
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Liberation Sans Narrow'
+      Font.Height = -10
+      Font.Name = 'Liberation Mono'
       MaxLength = 16
       ParentFont = False
       TabOrder = 7
@@ -426,7 +427,7 @@ object Form1: TForm1
       Top = 0
       Width = 598
       Align = alClient
-      Caption = 'Instructiuni:'
+      Caption = 'Instructions:'
       ClientHeight = 257
       ClientWidth = 594
       TabOrder = 0
@@ -882,7 +883,6 @@ object Form1: TForm1
         MouseTextActions = <>
         MouseSelActions = <>
         VisibleSpecialChars = [vscSpace, vscTabAtLast]
-        SelectedColor.FrameEdges = sfeAround
         SelectedColor.BackPriority = 50
         SelectedColor.ForePriority = 50
         SelectedColor.FramePriority = 50
@@ -890,23 +890,17 @@ object Form1: TForm1
         SelectedColor.ItalicPriority = 50
         SelectedColor.UnderlinePriority = 50
         SelectedColor.StrikeOutPriority = 50
-        IncrementColor.FrameEdges = sfeAround
-        HighlightAllColor.FrameEdges = sfeAround
         BracketHighlightStyle = sbhsBoth
         BracketMatchColor.Background = clNone
         BracketMatchColor.Foreground = clNone
-        BracketMatchColor.FrameEdges = sfeAround
         BracketMatchColor.Style = [fsBold]
         FoldedCodeColor.Background = clNone
         FoldedCodeColor.Foreground = clGray
         FoldedCodeColor.FrameColor = clGray
-        FoldedCodeColor.FrameEdges = sfeAround
         MouseLinkColor.Background = clNone
         MouseLinkColor.Foreground = clBlue
-        MouseLinkColor.FrameEdges = sfeAround
         LineHighlightColor.Background = clNone
         LineHighlightColor.Foreground = clNone
-        LineHighlightColor.FrameEdges = sfeAround
         inline SynLeftGutterPartList1: TSynGutterPartList
           object SynGutterMarks1: TSynGutterMarks
             Width = 24
@@ -917,7 +911,6 @@ object Form1: TForm1
             MouseActions = <>
             MarkupInfo.Background = clBtnFace
             MarkupInfo.Foreground = clNone
-            MarkupInfo.FrameEdges = sfeAround
             DigitCount = 2
             ShowOnlyLineNumbersMultiplesOf = 5
             ZeroStart = False
@@ -934,13 +927,11 @@ object Form1: TForm1
             MouseActions = <>
             MarkupInfo.Background = clWhite
             MarkupInfo.Foreground = clGray
-            MarkupInfo.FrameEdges = sfeAround
           end
           object SynGutterCodeFolding1: TSynGutterCodeFolding
             MouseActions = <>
             MarkupInfo.Background = clNone
             MarkupInfo.Foreground = clGray
-            MarkupInfo.FrameEdges = sfeAround
             MouseActionsExpanded = <>
             MouseActionsCollapsed = <>
           end
@@ -953,7 +944,7 @@ object Form1: TForm1
       Top = 292
       Width = 598
       Align = alBottom
-      Caption = 'MicroInstructiuni:'
+      Caption = 'MicroInstructions:'
       ClientHeight = 220
       ClientWidth = 594
       TabOrder = 1
@@ -1409,7 +1400,6 @@ object Form1: TForm1
         MouseTextActions = <>
         MouseSelActions = <>
         VisibleSpecialChars = [vscSpace, vscTabAtLast]
-        SelectedColor.FrameEdges = sfeAround
         SelectedColor.BackPriority = 50
         SelectedColor.ForePriority = 50
         SelectedColor.FramePriority = 50
@@ -1417,23 +1407,17 @@ object Form1: TForm1
         SelectedColor.ItalicPriority = 50
         SelectedColor.UnderlinePriority = 50
         SelectedColor.StrikeOutPriority = 50
-        IncrementColor.FrameEdges = sfeAround
-        HighlightAllColor.FrameEdges = sfeAround
         BracketHighlightStyle = sbhsBoth
         BracketMatchColor.Background = clNone
         BracketMatchColor.Foreground = clNone
-        BracketMatchColor.FrameEdges = sfeAround
         BracketMatchColor.Style = [fsBold]
         FoldedCodeColor.Background = clNone
         FoldedCodeColor.Foreground = clGray
         FoldedCodeColor.FrameColor = clGray
-        FoldedCodeColor.FrameEdges = sfeAround
         MouseLinkColor.Background = clNone
         MouseLinkColor.Foreground = clBlue
-        MouseLinkColor.FrameEdges = sfeAround
         LineHighlightColor.Background = clNone
         LineHighlightColor.Foreground = clNone
-        LineHighlightColor.FrameEdges = sfeAround
         inline SynLeftGutterPartList1: TSynGutterPartList
           object SynGutterMarks1: TSynGutterMarks
             Width = 24
@@ -1444,9 +1428,8 @@ object Form1: TForm1
             MouseActions = <>
             MarkupInfo.Background = clBtnFace
             MarkupInfo.Foreground = clNone
-            MarkupInfo.FrameEdges = sfeAround
             DigitCount = 2
-            ShowOnlyLineNumbersMultiplesOf = 1
+            ShowOnlyLineNumbersMultiplesOf = 5
             ZeroStart = False
             LeadingZeros = False
           end
@@ -1461,13 +1444,11 @@ object Form1: TForm1
             MouseActions = <>
             MarkupInfo.Background = clWhite
             MarkupInfo.Foreground = clGray
-            MarkupInfo.FrameEdges = sfeAround
           end
           object SynGutterCodeFolding1: TSynGutterCodeFolding
             MouseActions = <>
             MarkupInfo.Background = clNone
             MarkupInfo.Foreground = clGray
-            MarkupInfo.FrameEdges = sfeAround
             MouseActionsExpanded = <>
             MouseActionsCollapsed = <>
           end
@@ -1595,7 +1576,7 @@ object Form1: TForm1
       'xor'
     )
     Position = 0
-    LinesInWindow = 6
+    LinesInWindow = 1
     SelectedColor = clHighlight
     CaseSensitive = False
     Width = 262
@@ -1607,17 +1588,9 @@ object Form1: TForm1
     top = 8
   end
   object SynAnySyn1: TSynAnySyn
-    CommentAttri.FrameEdges = sfeAround
     Comments = [csAsmStyle]
-    DetectPreprocessor = False
-    IdentifierAttri.FrameEdges = sfeAround
-    IdentifierChars = '!"#$%&''()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÅÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü†°¢£§•¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂∑∏π∫ªºΩæø¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄€‹›ﬁﬂ‡·‚„‰ÂÊÁËÈÍÎÏÌÓÔÒÚÛÙıˆ˜¯˘˙˚¸˝˛ˇ'
-    KeyAttri.FrameEdges = sfeAround
-    ConstantAttri.FrameEdges = sfeAround
-    ObjectAttri.FrameEdges = sfeAround
-    EntityAttri.FrameEdges = sfeAround
-    VariableAttri.FrameEdges = sfeAround
-    DotAttri.FrameEdges = sfeAround
+    DetectPreprocessor = True
+    IdentifierChars = '!"#$%&''()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÅÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü†°¢£§•¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂∑∏π∫ªºΩæø¬√'
     KeyWords.Strings = (
       'ADD'
       'AND'
@@ -1681,11 +1654,6 @@ object Form1: TForm1
       'R9'
     )
     NumberAttri.Foreground = clTeal
-    NumberAttri.FrameEdges = sfeAround
-    PreprocessorAttri.FrameEdges = sfeAround
-    SpaceAttri.FrameEdges = sfeAround
-    StringAttri.FrameEdges = sfeAround
-    SymbolAttri.FrameEdges = sfeAround
     Markup = False
     Entity = False
     DollarVariables = False
@@ -1694,17 +1662,9 @@ object Form1: TForm1
     top = 7
   end
   object SynAnySyn2: TSynAnySyn
-    CommentAttri.FrameEdges = sfeAround
     Comments = [csAsmStyle]
-    DetectPreprocessor = False
-    IdentifierAttri.FrameEdges = sfeAround
-    IdentifierChars = '!"#$%&''()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÅÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü†°¢£§•¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂∑∏π∫ªºΩæø¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄€‹›ﬁﬂ‡·‚„‰ÂÊÁËÈÍÎÏÌÓÔÒÚÛÙıˆ˜¯˘˙˚¸˝˛ˇ'
-    KeyAttri.FrameEdges = sfeAround
-    ConstantAttri.FrameEdges = sfeAround
-    ObjectAttri.FrameEdges = sfeAround
-    EntityAttri.FrameEdges = sfeAround
-    VariableAttri.FrameEdges = sfeAround
-    DotAttri.FrameEdges = sfeAround
+    DetectPreprocessor = True
+    IdentifierChars = '!"#$%&''()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÅÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü†°¢£§•¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂∑∏π∫ªºΩæø¬√'
     KeyWords.Strings = (
       'ADD'
       'AND'
@@ -1789,11 +1749,6 @@ object Form1: TForm1
       'SBUS'
     )
     NumberAttri.Foreground = clTeal
-    NumberAttri.FrameEdges = sfeAround
-    PreprocessorAttri.FrameEdges = sfeAround
-    SpaceAttri.FrameEdges = sfeAround
-    StringAttri.FrameEdges = sfeAround
-    SymbolAttri.FrameEdges = sfeAround
     Markup = False
     Entity = False
     DollarVariables = False
@@ -1801,4 +1756,4 @@ object Form1: TForm1
     left = 531
     top = 320
   end
-end
+end
