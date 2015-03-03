@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 524
+  Left = 374
   Height = 698
   Top = 273
   Width = 1058
   Caption = 'CPU SIM'
-  ClientHeight = 680
+  ClientHeight = 679
   ClientWidth = 1058
   Color = clBtnFace
   Constraints.MinHeight = 612
@@ -23,7 +23,7 @@ object Form1: TForm1
     Left = 456
     Height = 25
     Hint = 'Step By Step (F7)'
-    Top = 601
+    Top = 641
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Step'
@@ -353,7 +353,7 @@ object Form1: TForm1
     Left = 618
     Height = 25
     Hint = 'Reset CPU (F2)'
-    Top = 601
+    Top = 641
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Reset CPU'
@@ -366,7 +366,7 @@ object Form1: TForm1
     Left = 538
     Height = 25
     Hint = 'Run Program (F9)'
-    Top = 601
+    Top = 641
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Run'
@@ -378,7 +378,7 @@ object Form1: TForm1
   object CheckBox1: TCheckBox
     Left = 456
     Height = 26
-    Top = 568
+    Top = 608
     Width = 67
     Anchors = [akLeft, akBottom]
     Caption = 'ACLOW'
@@ -387,7 +387,7 @@ object Form1: TForm1
   object CheckBox2: TCheckBox
     Left = 528
     Height = 26
-    Top = 568
+    Top = 608
     Width = 45
     Anchors = [akLeft, akBottom]
     Caption = 'CIL'
@@ -396,7 +396,7 @@ object Form1: TForm1
   object CheckBox3: TCheckBox
     Left = 576
     Height = 26
-    Top = 568
+    Top = 608
     Width = 53
     Anchors = [akLeft, akBottom]
     Caption = 'INTR'
@@ -404,37 +404,37 @@ object Form1: TForm1
   end
   object GroupBox4: TGroupBox
     Left = 456
-    Height = 570
+    Height = 601
     Top = 0
     Width = 602
     Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = 'Text Sim:'
-    ClientHeight = 541
+    ClientHeight = 572
     ClientWidth = 598
     TabOrder = 7
     object Splitter1: TSplitter
       Cursor = crVSplit
       Left = 0
       Height = 6
-      Top = 286
+      Top = 317
       Width = 598
       Align = alBottom
       ResizeAnchor = akBottom
     end
     object GroupBox2: TGroupBox
       Left = 0
-      Height = 286
+      Height = 317
       Top = 0
       Width = 598
       Align = alClient
       Caption = 'Instructions:'
-      ClientHeight = 257
+      ClientHeight = 288
       ClientWidth = 594
       TabOrder = 0
       object Edit2: TEdit
         Left = 0
         Height = 19
-        Top = 238
+        Top = 269
         Width = 594
         Align = alBottom
         ReadOnly = True
@@ -442,7 +442,7 @@ object Form1: TForm1
       end
       inline ASMCodeEditor1: TSynEdit
         Left = 0
-        Height = 238
+        Height = 269
         Top = 0
         Width = 594
         Align = alClient
@@ -941,7 +941,7 @@ object Form1: TForm1
     object GroupBox3: TGroupBox
       Left = 0
       Height = 249
-      Top = 292
+      Top = 323
       Width = 598
       Align = alBottom
       Caption = 'MicroInstructions:'
@@ -1588,6 +1588,7 @@ object Form1: TForm1
     top = 8
   end
   object SynAnySyn1: TSynAnySyn
+    Enabled = False
     Comments = [csAsmStyle]
     DetectPreprocessor = True
     IdentifierChars = '!"#$%&''()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÅÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü†°¢£§•¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂∑∏π∫ªºΩæø¬√'
@@ -1662,6 +1663,7 @@ object Form1: TForm1
     top = 7
   end
   object SynAnySyn2: TSynAnySyn
+    Enabled = False
     Comments = [csAsmStyle]
     DetectPreprocessor = True
     IdentifierChars = '!"#$%&''()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÅÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü†°¢£§•¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂∑∏π∫ªºΩæø¬√'

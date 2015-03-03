@@ -61,7 +61,6 @@
       <Unit3>
         <Filename Value="Cpu.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="Cpu"/>
       </Unit3>
       <Unit4>
         <Filename Value="about.pas"/>
@@ -69,7 +68,6 @@
         <ComponentName Value="Form2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="about"/>
       </Unit4>
       <Unit5>
         <Filename Value="Settings.pas"/>
@@ -77,12 +75,10 @@
         <ComponentName Value="Form3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Settings"/>
       </Unit5>
       <Unit6>
         <Filename Value="InOutUtils.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="InOutUtils"/>
       </Unit6>
     </Units>
   </ProjectOptions>
