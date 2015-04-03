@@ -25,7 +25,7 @@ type
   TMicroCode = record
     mInstr: String;
     mComenzi, adr: array of String;
-    mComCnt: Integer;
+    mComCnt, mInstrLineInFile: Integer;
   end;
 
   TInstr = record
@@ -72,7 +72,7 @@ type
   public
     constructor Create(tmpOwn: TObject);
     procedure RegAssign(tmpFLAGSReg: TObject; tmpGenReg: TObject; tmpSPReg: TObject; tmpTReg: TObject; tmpPCReg: TObject; tmpIVRReg: TObject; tmpADRReg: TObject; tmpMDRReg: TObject; tmpMEM: TObject; tmpIRReg: TObject);
-    function step: String;
+    function instructionStep: String;
     function GetCPUStatus: Boolean;
     procedure LoadCode(cod: TStrings);
     procedure setCpuIntr(tmpCIL: Boolean; tmpACL: Boolean; tmpINTR: Boolean);
@@ -80,6 +80,8 @@ type
     procedure readMicroCod(fl: String);
     procedure cpuInit;
     procedure SetMemSz(sz: Integer);
+    property mCodePos: Integer read opCode.codPoz;
+    property mCodePos: Integer read mPoz;
   end;
 
 implementation
@@ -362,12 +364,13 @@ begin
     mFaza := 1;
     inc(mPoz);
   end;
-end;//procedure TCPU.Step;
+end;//procedure TCPU.instructionStep;
 
 procedure TCPU.readMicroCod(fl: String);
 var
   f: TextFile;
   ln: String;
+  lineNumber: Integer = 0;
 begin
   if FileExistsUTF8(fl) { *Converted from FileExists* } then
   begin
@@ -382,6 +385,7 @@ begin
   while not eof(f) do
   begin
     repeat
+      inc(lineNumber);
       readln(f, ln);
 
       ln := replStr(ln, #9, ' ');
@@ -403,6 +407,7 @@ begin
       inc(mCode.MCDim);
       SetLength(mCode.mCode, mCode.MCDim+1);
       mCode.mCode[mCode.MCDim].mInstr := UpperCase(copy(ln, 1, pos(':', ln)-1));
+      mCode.mCode[mCode.MCDim].mInstrLineInFile:=lineNumber;
     end
     else
     begin
@@ -1333,18 +1338,18 @@ begin
   IRReg := tmpIRReg;
 end;//procedure TCPU.RegAssign(FLAGSReg: TObject; GenReg: TObject; SPReg: TObject; TReg: TObject; PCReg: TObject; IVRReg: TObject; ADRReg: TObject; MDRReg: TObject; MEM: TObject; IRReg: TObject);
 
-function TCPU.step: String;
+function TCPU.instructionStep: String;
 begin
   if opCode.codPoz < opCode.code.Count then
   begin
-    result := opCode.code.Strings[opCode.codPoz] + ':' + mCode.mCode[mPoz].mInstr + ':' + mCode.mCode[mPoz].mComenzi[mFaza];
+    result := IntToStr(mCode.mCode[mPoz].mInstrLineInFile + mFaza) + '|' + opCode.code.Strings[opCode.codPoz] + '|' + mCode.mCode[mPoz].mInstr + ':' + mCode.mCode[mPoz].mComenzi[mFaza];
     excMLin(mCode.mCode[mPoz].mComenzi[mFaza]);
   end
   else
   begin
     cpuInUse:= false;
   end;
-end;//function TCPU.step: Boolean;
+end;//function TCPU.instructionStep: Boolean;
 
 function TCPU.GetCPUStatus: Boolean;
 begin
@@ -1701,4 +1706,4 @@ begin
 end;//procedure TCPU.SetMemSz(sz: Integer);
 
 end.
-
+

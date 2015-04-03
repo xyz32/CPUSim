@@ -3,13 +3,13 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="8">
+    <Units Count="11">
       <Unit0>
         <Filename Value="CpuSim.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="6" Y="3"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="31"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
       <Unit1>
@@ -19,9 +19,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="main"/>
-        <TopLine Value="278"/>
-        <CursorPos X="17" Y="285"/>
-        <UsageCount Value="24"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="125"/>
+        <CursorPos Y="140"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -30,20 +31,22 @@
         <Filename Value="GrfCpu.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="GrfCpu"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="31" Y="14"/>
-        <UsageCount Value="24"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="205"/>
+        <CursorPos X="10" Y="101"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit2>
       <Unit3>
         <Filename Value="Cpu.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="79"/>
-        <CursorPos X="15" Y="79"/>
-        <UsageCount Value="24"/>
+        <UnitName Value="Cpu"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="1331"/>
+        <CursorPos Y="1345"/>
+        <UsageCount Value="31"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit3>
       <Unit4>
@@ -53,9 +56,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="about"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <CursorPos X="50" Y="20"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -67,10 +70,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Settings"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="19"/>
-        <CursorPos X="50" Y="33"/>
-        <UsageCount Value="24"/>
+        <CursorPos Y="33"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -81,135 +84,173 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="22"/>
         <CursorPos X="37" Y="50"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="31"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit6>
       <Unit7>
         <Filename Value="/usr/lib64/lazarus/packager/registration/fcllaz.pas"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit7>
+      <Unit8>
+        <Filename Value="/usr/lib64/lazarus/components/synedit/synedit.pp"/>
+        <UnitName Value="SynEdit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1025"/>
+        <CursorPos X="14" Y="1045"/>
+        <UsageCount Value="9"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="/usr/lib64/lazarus/lcl/include/control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2710"/>
+        <CursorPos Y="2724"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="/usr/share/fpcsrc/2.6.4/rtl/objpas/classes/classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="670"/>
+        <CursorPos X="14" Y="684"/>
+        <UsageCount Value="10"/>
+      </Unit10>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="main.pas"/>
-        <Caret Line="194" Column="35" TopLine="185"/>
+        <Caret Line="147" Column="40" TopLine="132"/>
       </Position1>
       <Position2>
         <Filename Value="main.pas"/>
-        <Caret Line="295" Column="17" TopLine="273"/>
+        <Caret Line="148" TopLine="132"/>
       </Position2>
       <Position3>
         <Filename Value="main.pas"/>
-        <Caret Line="123" Column="28" TopLine="108"/>
+        <Caret Line="149" TopLine="132"/>
       </Position3>
       <Position4>
         <Filename Value="main.pas"/>
-        <Caret Line="66" Column="59" TopLine="52"/>
+        <Caret Line="141" Column="26" TopLine="132"/>
       </Position4>
       <Position5>
         <Filename Value="main.pas"/>
-        <Caret Line="8" Column="21"/>
+        <Caret Line="140" Column="34" TopLine="132"/>
       </Position5>
       <Position6>
         <Filename Value="main.pas"/>
-        <Caret Line="8" Column="21" TopLine="8"/>
+        <Caret Line="141" Column="27" TopLine="126"/>
       </Position6>
       <Position7>
         <Filename Value="main.pas"/>
-        <Caret Line="174" Column="35" TopLine="159"/>
+        <Caret Line="146" TopLine="126"/>
       </Position7>
       <Position8>
         <Filename Value="main.pas"/>
-        <Caret Line="225" Column="37" TopLine="210"/>
+        <Caret Line="140" Column="28" TopLine="126"/>
       </Position8>
       <Position9>
         <Filename Value="main.pas"/>
-        <Caret Line="251" Column="19" TopLine="236"/>
+        <Caret Line="141" TopLine="126"/>
       </Position9>
       <Position10>
         <Filename Value="main.pas"/>
-        <Caret Line="258" Column="19" TopLine="243"/>
+        <Caret Line="142" TopLine="126"/>
       </Position10>
       <Position11>
         <Filename Value="main.pas"/>
-        <Caret Line="265" Column="23" TopLine="250"/>
+        <Caret Line="144" TopLine="126"/>
       </Position11>
       <Position12>
         <Filename Value="main.pas"/>
-        <Caret Line="267" Column="23" TopLine="252"/>
+        <Caret Line="139" Column="6" TopLine="126"/>
       </Position12>
       <Position13>
         <Filename Value="main.pas"/>
-        <Caret Line="268" Column="23" TopLine="256"/>
+        <Caret Line="140" TopLine="126"/>
       </Position13>
       <Position14>
         <Filename Value="main.pas"/>
-        <Caret Line="267" Column="23" TopLine="255"/>
+        <Caret Line="141" TopLine="126"/>
       </Position14>
       <Position15>
         <Filename Value="main.pas"/>
-        <Caret Line="268" Column="23" TopLine="256"/>
+        <Caret Line="142" TopLine="126"/>
       </Position15>
       <Position16>
         <Filename Value="main.pas"/>
-        <Caret Line="143" Column="13" TopLine="128"/>
+        <Caret Line="144" TopLine="126"/>
       </Position16>
       <Position17>
         <Filename Value="main.pas"/>
-        <Caret Line="148" TopLine="128"/>
+        <Caret Line="155" TopLine="142"/>
       </Position17>
       <Position18>
-        <Filename Value="main.pas"/>
-        <Caret Line="146" Column="31" TopLine="131"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1345" TopLine="1331"/>
       </Position18>
       <Position19>
         <Filename Value="main.pas"/>
-        <Caret Line="161" Column="17" TopLine="143"/>
+        <Caret Line="146" Column="26" TopLine="125"/>
       </Position19>
       <Position20>
         <Filename Value="main.pas"/>
-        <Caret Line="242" Column="17" TopLine="227"/>
+        <Caret Line="141" TopLine="125"/>
       </Position20>
       <Position21>
-        <Filename Value="GrfCpu.pas"/>
-        <Caret Line="395" Column="9" TopLine="385"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="142" TopLine="125"/>
       </Position21>
       <Position22>
-        <Filename Value="GrfCpu.pas"/>
-        <Caret Line="324" Column="85" TopLine="317"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="144" TopLine="125"/>
       </Position22>
       <Position23>
-        <Filename Value="GrfCpu.pas"/>
-        <Caret Line="304" Column="64" TopLine="289"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="146" TopLine="125"/>
       </Position23>
       <Position24>
-        <Filename Value="Settings.pas"/>
-        <Caret Line="33" Column="20" TopLine="17"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="144" Column="23" TopLine="125"/>
       </Position24>
       <Position25>
-        <Filename Value="GrfCpu.pas"/>
-        <Caret Line="735" Column="53" TopLine="703"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="140" TopLine="125"/>
       </Position25>
       <Position26>
-        <Filename Value="GrfCpu.pas"/>
-        <Caret Line="304" Column="50" TopLine="290"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1345" TopLine="1331"/>
       </Position26>
       <Position27>
         <Filename Value="main.pas"/>
-        <Caret Line="96" Column="11" TopLine="73"/>
+        <Caret Line="140" TopLine="125"/>
       </Position27>
       <Position28>
         <Filename Value="main.pas"/>
-        <Caret Line="313" Column="12" TopLine="299"/>
+        <Caret Line="141" TopLine="125"/>
       </Position28>
       <Position29>
         <Filename Value="main.pas"/>
-        <Caret Line="316" Column="14" TopLine="302"/>
+        <Caret Line="142" TopLine="125"/>
       </Position29>
       <Position30>
         <Filename Value="main.pas"/>
-        <Caret Line="323" Column="15" TopLine="309"/>
+        <Caret Line="144" TopLine="125"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="Cpu.pas"/>
+        <Line Value="1345"/>
+      </Item1>
+    </BreakPoints>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="List1"/>
+      </Item1>
+    </Watches>
+  </Debugging>
 </CONFIG>

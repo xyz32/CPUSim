@@ -4,7 +4,7 @@ object MainForm: TMainForm
   Top = 273
   Width = 1058
   Caption = 'CPU SIM'
-  ClientHeight = 679
+  ClientHeight = 680
   ClientWidth = 1058
   Color = clBtnFace
   Constraints.MinHeight = 612
@@ -23,7 +23,7 @@ object MainForm: TMainForm
     Left = 456
     Height = 25
     Hint = 'Step By Step (F7)'
-    Top = 641
+    Top = 642
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Step'
@@ -353,7 +353,7 @@ object MainForm: TMainForm
     Left = 618
     Height = 25
     Hint = 'Reset CPU (F2)'
-    Top = 641
+    Top = 642
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Reset CPU'
@@ -366,7 +366,7 @@ object MainForm: TMainForm
     Left = 538
     Height = 25
     Hint = 'Run Program (F9)'
-    Top = 641
+    Top = 642
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Run'
@@ -378,7 +378,7 @@ object MainForm: TMainForm
   object CheckBox1: TCheckBox
     Left = 456
     Height = 26
-    Top = 608
+    Top = 609
     Width = 67
     Anchors = [akLeft, akBottom]
     Caption = 'ACLOW'
@@ -387,7 +387,7 @@ object MainForm: TMainForm
   object CheckBox2: TCheckBox
     Left = 528
     Height = 26
-    Top = 608
+    Top = 609
     Width = 45
     Anchors = [akLeft, akBottom]
     Caption = 'CIL'
@@ -396,7 +396,7 @@ object MainForm: TMainForm
   object CheckBox3: TCheckBox
     Left = 576
     Height = 26
-    Top = 608
+    Top = 609
     Width = 53
     Anchors = [akLeft, akBottom]
     Caption = 'INTR'
@@ -404,31 +404,31 @@ object MainForm: TMainForm
   end
   object GroupBox4: TGroupBox
     Left = 456
-    Height = 601
+    Height = 602
     Top = 0
     Width = 602
     Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = 'Text Sim:'
-    ClientHeight = 572
+    ClientHeight = 573
     ClientWidth = 598
     TabOrder = 7
     object Splitter1: TSplitter
       Cursor = crVSplit
       Left = 0
       Height = 6
-      Top = 317
+      Top = 318
       Width = 598
       Align = alBottom
       ResizeAnchor = akBottom
     end
     object GroupBox2: TGroupBox
       Left = 0
-      Height = 317
+      Height = 318
       Top = 0
       Width = 598
       Align = alClient
       Caption = 'Instructions:'
-      ClientHeight = 288
+      ClientHeight = 289
       ClientWidth = 594
       TabOrder = 0
       object Edit2: TEdit
@@ -442,7 +442,7 @@ object MainForm: TMainForm
       end
       inline ASMCodeEditor1: TSynEdit
         Left = 0
-        Height = 269
+        Height = 270
         Top = 19
         Width = 594
         Align = alClient
@@ -941,7 +941,7 @@ object MainForm: TMainForm
     object GroupBox3: TGroupBox
       Left = 0
       Height = 249
-      Top = 323
+      Top = 324
       Width = 598
       Align = alBottom
       Caption = 'MicroInstructions:'

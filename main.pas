@@ -131,37 +131,30 @@ begin
 end;//procedure TMainForm.RefreshCpuStat;
 
 procedure TMainForm.SetCrMInstr(crPoz: String);
-
-  procedure SelText(crText: String);
-  var
-    mInst, mCod, tmp: String;
-    tmpint: Integer;
-  begin
-    crText := UpperCase(crText);
-    mInst := copy(crText, 1, pos(':', crText));
-    mCod := copy(crText, pos(':', crText)+1, length(crText));
-
-    //MicrocodeEdit1.SelStart := pos(mInst, UpperCase(MicrocodeEdit1.Text))-1;
-    //MicrocodeEdit1.SelLength := Length(mInst);
-
-    tmp := copy(MicrocodeEdit1.Text, pos(mInst, UpperCase(MicrocodeEdit1.Text)), Length(MicrocodeEdit1.Text));
-    tmpint := pos(mCod, UpperCase(tmp));
-    //RichEdit2.SelStart := tmpint + pos(mInst, UpperCase(RichEdit2.Text))-2;
-    //RichEdit2.SelLength := Length(mCod);
-  end;
+var
+  List1: TStringList;
 
 begin
-  edit2.Text := copy(crPoz, 1, pos(':', crPoz)-1);
+  List1 := TStringList.Create;
+  try
+    List1.Delimiter := '|';
+    List1.StrictDelimiter := true;
+    List1.DelimitedText := crPoz;
 
-  delete(crPoz, 1, pos(':', crPoz));
+    if List1.Count = 3 then
+    begin
+      WriteLn(List1.Count);
+      edit2.Text := List1[1];
+      Edit1.Text := List1[2];
+      MicrocodeEdit1.Lines.BeginUpdate;
+      MicrocodeEdit1.CaretY := StrToInt(List1[0]);
+      MicrocodeEdit1.SelectLine(true);
+      MicrocodeEdit1.Lines.EndUpdate;
+    end;
 
-  MicrocodeEdit1.Lines.BeginUpdate;
-
-  SelText(crPoz);
-
-  MicrocodeEdit1.Lines.EndUpdate;
-
-  Edit1.Text := crPoz;
+  finally
+    List1.Free;
+  end;
 end;
 
 procedure TMainForm.Button1Click(Sender: TObject);
@@ -170,14 +163,14 @@ begin
   if cmpCPU.GetCPUStatus then
   begin
     cmpCPU.setCpuIntr(CheckBox2.Checked, CheckBox1.Checked, CheckBox3.Checked);
-    SetCrMInstr(cmpCpu.step);
+    SetCrMInstr(cmpCpu.instructionStep);
     RefreshCpuStat;
   end
   else
   begin
     cmpCPU.LoadCode(ASMCodeEditor1.Lines);
     cmpCPU.setCpuIntr(CheckBox2.Checked, CheckBox1.Checked, CheckBox3.Checked);
-    SetCrMInstr(cmpCpu.step);
+    SetCrMInstr(cmpCpu.instructionStep);
     RefreshCpuStat;
   end;
 
@@ -208,7 +201,7 @@ begin
   if cmpCPU.GetCPUStatus then
   begin
     cmpCPU.setCpuIntr(CheckBox2.Checked, CheckBox1.Checked, CheckBox3.Checked);
-    SetCrMInstr(cmpCpu.step);
+    SetCrMInstr(cmpCpu.instructionStep);
     RefreshCpuStat;
   end
   else
