@@ -74,7 +74,7 @@ type
     procedure RegAssign(tmpFLAGSReg: TObject; tmpGenReg: TObject; tmpSPReg: TObject; tmpTReg: TObject; tmpPCReg: TObject; tmpIVRReg: TObject; tmpADRReg: TObject; tmpMDRReg: TObject; tmpMEM: TObject; tmpIRReg: TObject);
     function instructionStep: String;
     function GetCPUStatus: Boolean;
-    procedure LoadCode(cod: TStrings);
+    procedure LoadCode(asmExecCode: TStrings);
     procedure setCpuIntr(tmpCIL: Boolean; tmpACL: Boolean; tmpINTR: Boolean);
     procedure getCpuIntr(var tmpCIL: Boolean;var tmpACL: Boolean;var tmpINTR: Boolean);
     procedure readMicroCod(fl: String);
@@ -1392,6 +1392,9 @@ begin
 
   instr := Uppercase(instr);
 
+  if pos('#', instr) > 0 then
+     exit;
+
   while instr[1] = ' ' do
     delete(instr, 1, 1);
 
@@ -1453,7 +1456,7 @@ begin
 //  faza := FI;
 end;//procedure TCPU.decInstr(instr: String);
 
-procedure TCPU.LoadCode(cod: TStrings);
+procedure TCPU.LoadCode(asmExecCode: TStrings);
 var
   i, tmpInt, memAdr, memInc: Integer;
   rVal: String;
@@ -1516,11 +1519,11 @@ begin
   opCode.codPoz := 0;
   opCode.code.Clear;
 
-  for i:=0 to cod.Count-1 do
+  for i:=0 to asmExecCode.Count-1 do
   begin
     rVal := '';
     memInc := 2;
-    decInstr(cod.Strings[i]);
+    decInstr(asmExecCode.Strings[i]);
     if B1 then
     begin
       rVal := rVal + '1';
@@ -1533,7 +1536,7 @@ begin
       memWrite(memAdr, RegToInt(rVal));
       memAdr := memAdr + memInc;
 
-      opCode.code.Add(cod.Strings[i]);
+      opCode.code.Add(asmExecCode.Strings[i]);
       if memInc = 4 then
       begin
         opCode.code.Add('');
@@ -1556,7 +1559,7 @@ begin
       memWrite(memAdr, RegToInt(rVal));
       memAdr := memAdr + memInc;
 
-      opCode.code.Add(cod.Strings[i]);
+      opCode.code.Add(asmExecCode.Strings[i]);
       if memInc = 4 then
       begin
         opCode.code.Add('');
@@ -1578,7 +1581,7 @@ begin
       memWrite(memAdr, RegToInt(rVal));
       memAdr := memAdr + memInc;
 
-      opCode.code.Add(cod.Strings[i]);
+      opCode.code.Add(asmExecCode.Strings[i]);
       if memInc = 4 then
       begin
         opCode.code.Add('');
@@ -1599,7 +1602,7 @@ begin
       memWrite(memAdr, RegToInt(rVal));
       memAdr := memAdr + memInc;
 
-      opCode.code.Add(cod.Strings[i]);
+      opCode.code.Add(asmExecCode.Strings[i]);
       if memInc = 4 then
       begin
         opCode.code.Add('');

@@ -948,20 +948,10 @@ object MainForm: TMainForm
       ClientHeight = 220
       ClientWidth = 594
       TabOrder = 1
-      object Edit1: TEdit
-        Left = 0
-        Height = 19
-        Top = 0
-        Width = 594
-        Align = alTop
-        Anchors = [akTop, akRight, akBottom]
-        ReadOnly = True
-        TabOrder = 0
-      end
       inline MicrocodeEdit1: TSynEdit
         Left = 0
-        Height = 201
-        Top = 19
+        Height = 220
+        Top = 0
         Width = 594
         Align = alClient
         Font.Height = 13
@@ -970,7 +960,7 @@ object MainForm: TMainForm
         Font.Quality = fqNonAntialiased
         ParentColor = False
         ParentFont = False
-        TabOrder = 1
+        TabOrder = 0
         Gutter.Width = 57
         Gutter.MouseActions = <>
         RightGutter.Width = 0

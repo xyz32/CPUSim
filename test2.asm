@@ -1,3 +1,4 @@
+#do some jumping and some adding
 mov r1, 5
 mov r2, 0
 cmp r1, 0

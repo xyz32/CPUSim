@@ -64,7 +64,6 @@ type
     GroupBox2: TGroupBox;
     Edit2: TEdit;
     GroupBox3: TGroupBox;
-    Edit1: TEdit;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -143,9 +142,7 @@ begin
 
     if List1.Count = 3 then
     begin
-      WriteLn(List1.Count);
       edit2.Text := List1[1];
-      Edit1.Text := List1[2];
       MicrocodeEdit1.Lines.BeginUpdate;
       MicrocodeEdit1.CaretY := StrToInt(List1[0]);
       MicrocodeEdit1.SelectLine(true);

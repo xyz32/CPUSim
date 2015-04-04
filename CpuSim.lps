@@ -19,9 +19,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="main"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="125"/>
-        <CursorPos Y="140"/>
+        <TopLine Value="131"/>
+        <CursorPos X="10" Y="144"/>
         <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -42,9 +41,10 @@
         <Filename Value="Cpu.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Cpu"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="1331"/>
-        <CursorPos Y="1345"/>
+        <TopLine Value="6"/>
+        <CursorPos X="9" Y="21"/>
         <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -93,7 +93,6 @@
       </Unit7>
       <Unit8>
         <Filename Value="/usr/lib64/lazarus/components/synedit/synedit.pp"/>
-        <UnitName Value="SynEdit"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1025"/>
         <CursorPos X="14" Y="1045"/>
@@ -116,124 +115,124 @@
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="main.pas"/>
-        <Caret Line="147" Column="40" TopLine="132"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="38" Column="30" TopLine="14"/>
       </Position1>
       <Position2>
-        <Filename Value="main.pas"/>
-        <Caret Line="148" TopLine="132"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="45" Column="22" TopLine="21"/>
       </Position2>
       <Position3>
-        <Filename Value="main.pas"/>
-        <Caret Line="149" TopLine="132"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="46" Column="17" TopLine="22"/>
       </Position3>
       <Position4>
         <Filename Value="main.pas"/>
-        <Caret Line="141" Column="26" TopLine="132"/>
+        <Caret Line="169" Column="26" TopLine="152"/>
       </Position4>
       <Position5>
-        <Filename Value="main.pas"/>
-        <Caret Line="140" Column="34" TopLine="132"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1456" Column="36" TopLine="1432"/>
       </Position5>
       <Position6>
-        <Filename Value="main.pas"/>
-        <Caret Line="141" Column="27" TopLine="126"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="77" Column="35" TopLine="64"/>
       </Position6>
       <Position7>
-        <Filename Value="main.pas"/>
-        <Caret Line="146" TopLine="126"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1456" Column="36" TopLine="1432"/>
       </Position7>
       <Position8>
-        <Filename Value="main.pas"/>
-        <Caret Line="140" Column="28" TopLine="126"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1523" Column="8" TopLine="1508"/>
       </Position8>
       <Position9>
-        <Filename Value="main.pas"/>
-        <Caret Line="141" TopLine="126"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1524" Column="15" TopLine="1514"/>
       </Position9>
       <Position10>
-        <Filename Value="main.pas"/>
-        <Caret Line="142" TopLine="126"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="28" Column="30" TopLine="16"/>
       </Position10>
       <Position11>
-        <Filename Value="main.pas"/>
-        <Caret Line="144" TopLine="126"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="410" Column="48" TopLine="387"/>
       </Position11>
       <Position12>
-        <Filename Value="main.pas"/>
-        <Caret Line="139" Column="6" TopLine="126"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1345" Column="58" TopLine="1321"/>
       </Position12>
       <Position13>
-        <Filename Value="main.pas"/>
-        <Caret Line="140" TopLine="126"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="28" Column="30" TopLine="14"/>
       </Position13>
       <Position14>
         <Filename Value="main.pas"/>
-        <Caret Line="141" TopLine="126"/>
+        <Caret Line="169" Column="26" TopLine="152"/>
       </Position14>
       <Position15>
-        <Filename Value="main.pas"/>
-        <Caret Line="142" TopLine="126"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1523" Column="9" TopLine="1503"/>
       </Position15>
       <Position16>
-        <Filename Value="main.pas"/>
-        <Caret Line="144" TopLine="126"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1396" Column="10" TopLine="1376"/>
       </Position16>
       <Position17>
         <Filename Value="main.pas"/>
-        <Caret Line="155" TopLine="142"/>
+        <Caret Line="169" Column="26" TopLine="152"/>
       </Position17>
       <Position18>
         <Filename Value="Cpu.pas"/>
-        <Caret Line="1345" TopLine="1331"/>
+        <Caret Line="1345" TopLine="1340"/>
       </Position18>
       <Position19>
-        <Filename Value="main.pas"/>
-        <Caret Line="146" Column="26" TopLine="125"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1499" TopLine="1486"/>
       </Position19>
       <Position20>
-        <Filename Value="main.pas"/>
-        <Caret Line="141" TopLine="125"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1345" TopLine="1330"/>
       </Position20>
       <Position21>
-        <Filename Value="main.pas"/>
-        <Caret Line="142" TopLine="125"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1346" TopLine="1330"/>
       </Position21>
       <Position22>
-        <Filename Value="main.pas"/>
-        <Caret Line="144" TopLine="125"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1345" TopLine="1330"/>
       </Position22>
       <Position23>
-        <Filename Value="main.pas"/>
-        <Caret Line="146" TopLine="125"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="1346" TopLine="1330"/>
       </Position23>
       <Position24>
         <Filename Value="main.pas"/>
-        <Caret Line="144" Column="23" TopLine="125"/>
+        <Caret Line="169" Column="26" TopLine="152"/>
       </Position24>
       <Position25>
         <Filename Value="main.pas"/>
-        <Caret Line="140" TopLine="125"/>
+        <Caret Line="144" Column="10" TopLine="131"/>
       </Position25>
       <Position26>
         <Filename Value="Cpu.pas"/>
-        <Caret Line="1345" TopLine="1331"/>
+        <Caret Line="1345" Column="86" TopLine="1321"/>
       </Position26>
       <Position27>
-        <Filename Value="main.pas"/>
-        <Caret Line="140" TopLine="125"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="20" Column="8" TopLine="13"/>
       </Position27>
       <Position28>
-        <Filename Value="main.pas"/>
-        <Caret Line="141" TopLine="125"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="46" Column="18" TopLine="25"/>
       </Position28>
       <Position29>
-        <Filename Value="main.pas"/>
-        <Caret Line="142" TopLine="125"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="20" Column="8" TopLine="6"/>
       </Position29>
       <Position30>
-        <Filename Value="main.pas"/>
-        <Caret Line="144" TopLine="125"/>
+        <Filename Value="Cpu.pas"/>
+        <Caret Line="46" Column="18" TopLine="22"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
