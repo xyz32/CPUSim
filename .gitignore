@@ -5,6 +5,7 @@ lib/
 *.o
 *.or
 *.ppu
+*.a
 CpuSim
 
 # Delphi compiler-generated binaries (safe to delete)

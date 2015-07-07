@@ -1,6 +1,5 @@
-#  microcod realizat de
-#  microcod written by
-#  Mosoiu Monica
+#  Microcod realizat de Mosoiu Monica
+#  Microcode written by Mosoiu Monica
 IF:
 	000	NONE, PdPCd, DBUS, PmADR
 	001	IFCH, +2PC
