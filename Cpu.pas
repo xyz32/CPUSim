@@ -81,7 +81,6 @@ type
     procedure cpuInit;
     procedure SetMemSz(sz: Integer);
     property mCodePos: Integer read opCode.codPoz;
-    property mCodePos: Integer read mPoz;
   end;
 
 implementation

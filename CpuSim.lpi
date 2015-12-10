@@ -51,17 +51,14 @@
         <ComponentName Value="MainForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="main"/>
       </Unit1>
       <Unit2>
         <Filename Value="GrfCpu.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="GrfCpu"/>
       </Unit2>
       <Unit3>
         <Filename Value="Cpu.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="Cpu"/>
       </Unit3>
       <Unit4>
         <Filename Value="about.pas"/>
@@ -69,7 +66,6 @@
         <ComponentName Value="AboutForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="about"/>
       </Unit4>
       <Unit5>
         <Filename Value="Settings.pas"/>
@@ -77,7 +73,6 @@
         <ComponentName Value="SettingsForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Settings"/>
       </Unit5>
       <Unit6>
         <Filename Value="InOutUtils.pas"/>
