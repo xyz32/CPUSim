@@ -1,10 +1,10 @@
 object MainForm: TMainForm
-  Left = 374
+  Left = 353
   Height = 698
-  Top = 273
+  Top = 205
   Width = 1058
   Caption = 'CPU SIM'
-  ClientHeight = 680
+  ClientHeight = 675
   ClientWidth = 1058
   Color = clBtnFace
   Constraints.MinHeight = 612
@@ -18,12 +18,12 @@ object MainForm: TMainForm
   OnKeyUp = FormKeyUp
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.4.0.2'
+  LCLVersion = '1.6.2.0'
   object Button1: TButton
     Left = 456
     Height = 25
     Hint = 'Step By Step (F7)'
-    Top = 642
+    Top = 637
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Step'
@@ -38,16 +38,16 @@ object MainForm: TMainForm
     Top = 0
     Width = 451
     Caption = 'Visual Sim:'
-    ClientHeight = 643
-    ClientWidth = 447
+    ClientHeight = 658
+    ClientWidth = 449
     Color = clBtnFace
     ParentColor = False
     TabOrder = 1
     object Image1: TImage
       Left = 0
-      Height = 643
+      Height = 658
       Top = 0
-      Width = 447
+      Width = 449
       Align = alClient
       Proportional = True
       Stretch = True
@@ -95,6 +95,7 @@ object MainForm: TMainForm
           end        
           item
             Caption = 'adr'
+            Width = 56
           end>
         ColumnClick = False
         DragKind = dkDock
@@ -133,7 +134,7 @@ object MainForm: TMainForm
           end        
           item
             Caption = 'regN'
-            Width = 35
+            Width = 41
           end>
         DragKind = dkDock
         DragMode = dmAutomatic
@@ -151,7 +152,7 @@ object MainForm: TMainForm
     end
     object LabeledEdit1: TLabeledEdit
       Left = 254
-      Height = 17
+      Height = 28
       Top = 90
       Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit1
@@ -177,7 +178,7 @@ object MainForm: TMainForm
     end
     object LabeledEdit2: TLabeledEdit
       Left = 254
-      Height = 17
+      Height = 28
       Top = 242
       Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit2
@@ -202,7 +203,7 @@ object MainForm: TMainForm
     end
     object LabeledEdit3: TLabeledEdit
       Left = 254
-      Height = 17
+      Height = 28
       Top = 290
       Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit3
@@ -227,7 +228,7 @@ object MainForm: TMainForm
     end
     object LabeledEdit4: TLabeledEdit
       Left = 254
-      Height = 17
+      Height = 28
       Top = 338
       Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit4
@@ -252,7 +253,7 @@ object MainForm: TMainForm
     end
     object LabeledEdit5: TLabeledEdit
       Left = 254
-      Height = 17
+      Height = 28
       Top = 386
       Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit5
@@ -277,7 +278,7 @@ object MainForm: TMainForm
     end
     object LabeledEdit6: TLabeledEdit
       Left = 254
-      Height = 17
+      Height = 28
       Top = 434
       Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit6
@@ -302,7 +303,7 @@ object MainForm: TMainForm
     end
     object LabeledEdit7: TLabeledEdit
       Left = 254
-      Height = 17
+      Height = 28
       Top = 482
       Width = 107
       EditLabel.AnchorSideLeft.Control = LabeledEdit7
@@ -327,7 +328,7 @@ object MainForm: TMainForm
     end
     object LabeledEdit8: TLabeledEdit
       Left = 22
-      Height = 17
+      Height = 28
       Top = 426
       Width = 106
       EditLabel.AnchorSideLeft.Control = LabeledEdit8
@@ -353,7 +354,7 @@ object MainForm: TMainForm
     Left = 618
     Height = 25
     Hint = 'Reset CPU (F2)'
-    Top = 642
+    Top = 637
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Reset CPU'
@@ -366,7 +367,7 @@ object MainForm: TMainForm
     Left = 538
     Height = 25
     Hint = 'Run Program (F9)'
-    Top = 642
+    Top = 637
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Run'
@@ -377,17 +378,17 @@ object MainForm: TMainForm
   end
   object CheckBox1: TCheckBox
     Left = 456
-    Height = 26
-    Top = 609
-    Width = 67
+    Height = 23
+    Top = 607
+    Width = 72
     Anchors = [akLeft, akBottom]
     Caption = 'ACLOW'
     TabOrder = 4
   end
   object CheckBox2: TCheckBox
     Left = 528
-    Height = 26
-    Top = 609
+    Height = 23
+    Top = 607
     Width = 45
     Anchors = [akLeft, akBottom]
     Caption = 'CIL'
@@ -395,56 +396,56 @@ object MainForm: TMainForm
   end
   object CheckBox3: TCheckBox
     Left = 576
-    Height = 26
-    Top = 609
-    Width = 53
+    Height = 23
+    Top = 607
+    Width = 54
     Anchors = [akLeft, akBottom]
     Caption = 'INTR'
     TabOrder = 6
   end
   object GroupBox4: TGroupBox
     Left = 456
-    Height = 602
+    Height = 597
     Top = 0
     Width = 602
     Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = 'Text Sim:'
-    ClientHeight = 573
-    ClientWidth = 598
+    ClientHeight = 583
+    ClientWidth = 600
     TabOrder = 7
     object Splitter1: TSplitter
       Cursor = crVSplit
       Left = 0
       Height = 6
-      Top = 318
-      Width = 598
+      Top = 328
+      Width = 600
       Align = alBottom
       ResizeAnchor = akBottom
     end
     object GroupBox2: TGroupBox
       Left = 0
-      Height = 318
+      Height = 328
       Top = 0
-      Width = 598
+      Width = 600
       Align = alClient
       Caption = 'Instructions:'
-      ClientHeight = 289
-      ClientWidth = 594
+      ClientHeight = 314
+      ClientWidth = 598
       TabOrder = 0
       object Edit2: TEdit
         Left = 0
-        Height = 19
+        Height = 30
         Top = 0
-        Width = 594
+        Width = 598
         Align = alTop
         ReadOnly = True
         TabOrder = 0
       end
       inline ASMCodeEditor1: TSynEdit
         Left = 0
-        Height = 270
-        Top = 19
-        Width = 594
+        Height = 284
+        Top = 30
+        Width = 598
         Align = alClient
         Font.Height = 13
         Font.Name = 'DejaVu Sans Mono'
@@ -941,18 +942,18 @@ object MainForm: TMainForm
     object GroupBox3: TGroupBox
       Left = 0
       Height = 249
-      Top = 324
-      Width = 598
+      Top = 334
+      Width = 600
       Align = alBottom
       Caption = 'MicroInstructions:'
-      ClientHeight = 220
-      ClientWidth = 594
+      ClientHeight = 235
+      ClientWidth = 598
       TabOrder = 1
       inline MicrocodeEdit1: TSynEdit
         Left = 0
-        Height = 220
+        Height = 235
         Top = 0
-        Width = 594
+        Width = 598
         Align = alClient
         Font.Height = 13
         Font.Name = 'DejaVu Sans Mono'
@@ -1571,6 +1572,7 @@ object MainForm: TMainForm
     SelectedColor = clHighlight
     CaseSensitive = False
     Width = 262
+    AutoUseSingleIdent = True
     ShortCut = 16416
     EndOfTokenChr = '()[].'
     ExecCommandID = ecSynCompletionExecute

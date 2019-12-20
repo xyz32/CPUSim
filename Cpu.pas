@@ -371,7 +371,7 @@ var
   ln: String;
   lineNumber: Integer = 0;
 begin
-  if FileExistsUTF8(fl) { *Converted from FileExists* } then
+  if FileExists(fl) { *Converted from FileExists* } then
   begin
     assignFile(f, fl);
     reset(f);
