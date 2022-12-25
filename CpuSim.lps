@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectSession>
-    <Version Value="9"/>
+    <Version Value="12"/>
     <BuildModes Active="Default"/>
     <Units Count="11">
       <Unit0>
@@ -18,11 +18,11 @@
         <ComponentName Value="MainForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <CursorPos X="31" Y="12"/>
         <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit1>
       <Unit2>
         <Filename Value="GrfCpu.pas"/>
@@ -32,18 +32,15 @@
         <CursorPos X="10" Y="101"/>
         <UsageCount Value="31"/>
         <Loaded Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit2>
       <Unit3>
         <Filename Value="Cpu.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="69"/>
         <CursorPos X="51" Y="83"/>
         <UsageCount Value="31"/>
         <Loaded Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit3>
       <Unit4>
         <Filename Value="about.pas"/>
@@ -56,7 +53,6 @@
         <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit4>
       <Unit5>
         <Filename Value="Settings.pas"/>
@@ -70,7 +66,6 @@
         <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit5>
       <Unit6>
         <Filename Value="InOutUtils.pas"/>
@@ -229,21 +224,25 @@
         <Caret Line="11" Column="6" TopLine="9"/>
       </Position30>
     </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
   <Debugging>
-    <BreakPoints Count="1">
-      <Item1>
+    <BreakPoints>
+      <Item>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="Cpu.pas"/>
         <Line Value="1344"/>
-      </Item1>
+      </Item>
     </BreakPoints>
-    <Watches Count="1">
-      <Item1>
+    <Watches>
+      <Item>
         <Expression Value="List1"/>
-      </Item1>
+      </Item>
     </Watches>
   </Debugging>
 </CONFIG>
